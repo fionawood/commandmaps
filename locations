@@ -52,6 +52,17 @@ HOME 52 -> 138
 		alphabet 389
 		paragraph 423
 
+	***STYLES
+
+	STYLES 58 -> 117, 448
+		normal 521
+		no spacing 594
+		header1 666
+		arrows 680
+		change 733
+
+	EDITING binoculars 777
+
 INSERT  162 -> 246
 
 LAYOUT 271 -> 355
