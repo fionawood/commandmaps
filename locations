@@ -1,2 +1,35 @@
 COMMANDMAPS
 
+HOME 52 -> 138
+	paste 53
+	paintbrush 83
+	TEXT 55 -> 77
+		font 232
+		size 278
+	STYLE 77 -> 98
+		bold 115
+		italics 138
+		underline 173
+		strikethrough 199
+		subscript 222
+		superscript 248
+		AB 280
+
+	COLORS 98 -> 123
+		shadow 115
+		highlight 158
+		color 191
+		Aa 226
+		A 255
+		littleA 280
+
+
+
+INSERT  162 -> 246
+
+LAYOUT 271 -> 355
+
+REVIEW 377 -> 462
+
+VIEW 484 -> 569
+
