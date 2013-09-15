@@ -32,7 +32,7 @@
 // prevent direct calls
 if (!defined('__COMMANDMAPS_ENTRY_POINT__')) die('Invalid access.');
 
-require_once (joinPaths(CHRIS_CONTROLLER_FOLDER, 'db.class.php'));
+require_once ('db.class.php');
 
 // interface
 interface MapperInterface
