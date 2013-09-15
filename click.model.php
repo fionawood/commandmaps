@@ -4,8 +4,6 @@ require_once 'object.model.php';
 
 
 class Click extends Object {
-  
-  public $uid = '';
 
   public $user_id = 0;
 
