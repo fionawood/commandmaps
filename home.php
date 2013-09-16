@@ -14,6 +14,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src='js/util.js'></script>
         <script src='js/questions.js'></script>
+        <script src='js/interaction.js'></script>
 
 
     </head>
@@ -33,57 +34,6 @@
 	canvas { background:url(http://monster.krash.net/cs279/commandmaps/gfx/commandmap.png);}
 </style>
 
-<script type='text/javascript'>//<![CDATA[ 
-	var x = -100;
-	var y = -100;
-	var time = 0;
-	var radius = 0;
-	var alpha = 1;
-
-	function draw_circle(){
-        var c=document.getElementById("special"); 
-        var ctx= c.getContext("2d");
-    	ctx.clearRect(0,0,800,600);
-        ctx.beginPath();
-        ctx.arc(x, y, radius,0, 2*Math.PI);
-        ctx.lineWidth = 5;
-		ctx.strokeStyle = 'rgba(200,0,0,'+alpha+')';
-        ctx.stroke();
-		
-		if(radius <= 15) {
-			radius+=1;
-			alpha-=.07;
-		} 
-
-	}
-
-$(window).load(function(){
-	
-	// var radius = 10;
-	// var alpha = 1;
-	// var x = 100;
-	// var y = 100;
-	setInterval(draw_circle,30);
-	// draw_circle();
-
-
-	jQuery(document).ready(function(){
-
-	     $("#special").click(function(e){ 
-
-	        x = e.pageX - this.offsetLeft;
-	        y = e.pageY - this.offsetTop; 
-	        time = e.timeStamp;
-	        radius=0;
-	        alpha=1;
-	        draw_circle();
-
-	        $('#status2').html('position = ' + x +', '+ y + " @ " + time); 
-	   }); 
-	})  
-});//]]>  
-
-</script>
 
 <!-- HOME -->
 <div id="home">
@@ -113,7 +63,7 @@ We have 2 interfaces for you to test out! Some practice first.
 
 <!-- EXPERIMENT -->
 <div id="experiment" style="display:inline-block;display:none;">
-	<div class="box-instr"></br><b>Bold</b></br><img src="gfx/bold.png"></div>
+	<div class="box-instr"></br><b id='label'>Bold</b></br><img id='icon' src="gfx/bold.png"></div>
 	<div class="box-pic">
 		<canvas width="800px" height="600px" style="width: 800px; height: 600px; border:1px ridge green;" id="special"></canvas>
 	</div>

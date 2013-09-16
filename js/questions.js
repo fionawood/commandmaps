@@ -138,12 +138,34 @@ Q.init = function(how_many, need_switch) {
 
   return icons;
 
-}
+};
 
 Q.r = function() {
 
   var icons = Object.keys(Q.Ribbon_icons_catalog);
   return icons[Math.floor(Math.random()*icons.length)]
 
-}
+};
 
+Q.validate = function(x,y) {
+
+  var x1 = Q.Commandmap_icons_catalog[Q.current]['x1'];
+  var x2 = Q.Commandmap_icons_catalog[Q.current]['x2'];
+  var y1 = Q.Commandmap_icons_catalog[Q.current]['y1'];
+  var y2 = Q.Commandmap_icons_catalog[Q.current]['y2'];
+
+  return ((x <= x2 && x >= x1) && (y <= y2 && y >= y1));
+
+};
+
+Q.setup = function() {
+
+  icons = Q.init(5);
+
+  Q.current = icons[0];
+
+  // update div
+  $('#label').html(Q.current);
+  $('#icon')[0].src = 'gfx/'+Q.current;
+
+};
