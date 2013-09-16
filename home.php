@@ -80,26 +80,27 @@ We have 2 interfaces for you to test out! Some practice first.
 <div id="questionnaire" style="text-align:left;margin-left:5%;display:none;">
 <h3>Some questions:</h3>
 <b>Which interface did you prefer?</b></br></br>
-<form>
+<form id='interface_form'>
 &nbsp;&nbsp;&nbsp;
 <input type="radio" name="preference" value="ribbons">Ribbons &nbsp;&nbsp;&nbsp;
-<input type="radio" name="preference" value="cmdmps">Commandmaps
+<input type="radio" name="preference" value="commandmaps">Commandmaps
 </form>
 </br></br>
 <b>What device are you using on your computer?</b></br></br>
-<form>
+<form id='device_form'>
 &nbsp;&nbsp;&nbsp;
 <input type="radio" name="device" value="mouse">Mouse &nbsp;&nbsp;&nbsp;
 <input type="radio" name="device" value="trackpad">Trackpad &nbsp;&nbsp;&nbsp;
 <input type="radio" name="device" value="mouse">Other
+</form>
 </br></br>
 <b>Comments?</b>
 <div style="color:grey;font-size:small"><i>technical difficulties? thoughts in general?</i></div></br>
-<form method="post" action="">
+<form id='comments_form'>
 <textarea name="comments" id="comments" cols="25" rows="5">
 </textarea><br><br>
-<button class="next-btn" onclick="Q.submit();" style="margin-left:5px;">Submit</button>
 </form>
+<button class="next-btn" onclick="Q.submit();" style="margin-left:5px;">Submit</button>
 </div>
 
 <!-- FINISH end page -->
