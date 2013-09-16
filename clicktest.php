@@ -30,12 +30,12 @@
         var ctx= c.getContext("2d");
         ctx.beginPath();
         ctx.arc(x, y, radius,0, 2*Math.PI);
-		ctx.strokeStyle = 'rgba(0,200,200,'+alpha+')';
+		ctx.strokeStyle = 'rgba(200,0,0,'+alpha+')';
         ctx.stroke();
 		
 		if(radius <= 20) {
 			radius+=1;
-			alpha-=.01;
+			// alpha-=.01;
 		} 
 	}
 
