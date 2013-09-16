@@ -19,7 +19,9 @@
   
 
 <script type='text/javascript'>//<![CDATA[ 
-
+	var x = -1;
+	var y = -1;
+	var time = 0;
 	function draw_circle(){
 		var canvas = document.getElementById('special');
 		var ctx = canvas.getContext('2d');
@@ -59,10 +61,10 @@ $(window).load(function(){
 
 	     $("#special").click(function(e){ 
 
-	        var x = e.pageX - this.offsetLeft;
-	        var y = e.pageY - this.offsetTop; 
-	        var t = e.timeStamp;
-	        
+	        x = e.pageX - this.offsetLeft;
+	        y = e.pageY - this.offsetTop; 
+	        time = e.timeStamp;
+
 	        var c=document.getElementById("special"); 
 	        var ctx= c.getContext("2d");
 	        ctx.beginPath();
@@ -72,7 +74,7 @@ $(window).load(function(){
 	        ctx.strokeStyle="red";
 	        ctx.stroke();
 
-	        $('#status2').html('position = ' + x +', '+ y + " @ " + t); 
+	        $('#status2').html('position = ' + x +', '+ y + " @ " + time); 
 	   }); 
 	})  
 });//]]>  
