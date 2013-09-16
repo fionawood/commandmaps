@@ -66,11 +66,11 @@ We have 2 interfaces for you to test out! Some practice first.
 
 <!-- EXPERIMENT -->
 	<div id="experiment" style="display:inline-block;display:none;">
-		<div id="overlay">
 	<div class="box-instr"></br><b id='label'>Bold</b></br><img id='icon' src="gfx/bold.png"></div>
 	<div class="box-pic">
 		<canvas width="800px" height="600px" style="width: 800px; height: 600px; border:1px ridge green;" id="special"></canvas>
 	</div>
+<div id="overlay">	
 	<button id="next" class="next-btn" onclick="Q.init_question();" style="display:none;">Next</button>
 	<button id="done-btn" class="next-btn" onclick="$('#experiment').hide();$('#questionnaire').show();" style="display:none;">Next</button>
 </div>

@@ -130,10 +130,9 @@
     bottom: 50%;
 }
 
-/* overlay opacity and whole screen */
+/* overlay opacity on whole screen */
 #overlay
 {
-    /*opacity:0.4;*/
     position: fixed;
     width: 100%;
     height: 100%;
