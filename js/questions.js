@@ -226,6 +226,9 @@ Q.init_question = function() {
   // update div
   $('#label').html(Q.current);
   $('#icon')[0].src = 'gfx/'+Q.current;
+  
+  if(Q.current_sequence=='Ribbon')
+    $('canvas').css({'background':"url(http://monster.krash.net/commandmaps/gfx/ribbon_main.png)"});
 
   $('#next').hide();
 
