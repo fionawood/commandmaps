@@ -28,7 +28,7 @@
 			// ctx.translate(canvas.width/2,canvas.height/2);
 		ctx.fillStyle = 'red';//'rgba(0,100,200,'+alpha+')';
 		ctx.beginPath();
-		ctx.arc(x,y,10,0,Math.PI*2,false);
+		ctx.arc(x,y,100,0,Math.PI*2,false);
 		ctx.fill();
 		
 		// if(radius >= 100) {
@@ -49,9 +49,10 @@ $(window).load(function(){
 	
 	var radius = 10;
 	var alpha = 1;
-	var x = 10;
-	var y = 10;
-	setInterval(draw_circle,20);
+	var x = 100;
+	var y = 100;
+	//setInterval(draw_circle,20);
+	draw_circle();
 
 
 	jQuery(document).ready(function(){
