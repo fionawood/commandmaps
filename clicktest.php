@@ -19,8 +19,8 @@
   
 
 <script type='text/javascript'>//<![CDATA[ 
-	var x = -1;
-	var y = -1;
+	var x = -100;
+	var y = -100;
 	var time = 0;
 	var radius = 0;
 	var alpha = 1;
@@ -57,6 +57,7 @@ $(window).load(function(){
 	        y = e.pageY - this.offsetTop; 
 	        time = e.timeStamp;
 	        radius=0;
+	        alpha=1;
 	        draw_circle();
 
 	        $('#status2').html('position = ' + x +', '+ y + " @ " + time); 
