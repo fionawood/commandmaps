@@ -54,7 +54,7 @@ We have 2 interfaces for you to test out! Some practice first.
 
 <!-- button FROM home TO experiment -->
 <button class="next-btn" onclick="$('#home').hide();$('#experiment').show();$('#bottom').hide();">Next</button>
-
+</br>
 <div id="bottom">
     CS 279 |  <a>Daniel, Fiona, and Sharon</a>
 </div>
@@ -67,6 +67,7 @@ We have 2 interfaces for you to test out! Some practice first.
 	<div class="box-pic">
 		<canvas width="800px" height="600px" style="width: 800px; height: 600px; border:1px ridge green;" id="special"></canvas>
 	</div>
+	<button id="done-btn" class="next-btn" onclick="$('#experiment').hide();$('#questionnaire').show();" style="display:none;">Next</button>
 </div>
 
 <!-- QUESTIONNAIRE -->
@@ -91,7 +92,7 @@ We have 2 interfaces for you to test out! Some practice first.
 <form method="post" action="">
 <textarea name="comments" id="comments" cols="25" rows="5">
 </textarea><br><br>
-<button class="next-btn" type="submit" onclick="location.href='finish.php';" style="margin-left:5px;">Next</button>
+<button class="next-btn" onclick="$('#questionnaire').hide();$('#finish').show();" style="margin-left:5px;">Next</button>
 </form>
 </div>
 
