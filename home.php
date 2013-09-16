@@ -141,7 +141,7 @@ We have 2 interfaces for you to test out! Some practice first.
 <form method="post" action="">
 <textarea name="comments" id="comments" cols="25" rows="5">
 </textarea><br><br>
-<button class="next-btn" type="submit" onclick="location.href='finish.php';" style="margin-left:5px;">Next</button>
+<button class="next-btn" onclick="$('#questionnaire').hide();$('#finish').show();" style="margin-left:5px;">Next</button>
 </form>
 </div>
 
