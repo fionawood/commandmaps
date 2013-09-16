@@ -30,7 +30,7 @@
         var ctx= c.getContext("2d");
         ctx.beginPath();
         ctx.arc(x, y, radius,0, 2*Math.PI);
-        ctx.fillStyle="blue";
+        ctx.fillStyle="green";
         ctx.fill();
 		
 		if(radius >= 100) {
@@ -52,7 +52,7 @@ $(window).load(function(){
 	// var alpha = 1;
 	// var x = 100;
 	// var y = 100;
-	//setInterval(draw_circle,20);
+	setInterval(draw_circle,20);
 	// draw_circle();
 
 
