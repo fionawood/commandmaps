@@ -1,7 +1,5 @@
 <!-- Welcome to the source code of team CS279 CommandMaps! -->
 <!DOCTYPE html>
-
-Home.
 <h1>Designing for You</h1>
 Help us study user interface design.
 </br></br>
