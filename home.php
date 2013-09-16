@@ -1,10 +1,10 @@
 <!-- Welcome to the source code of team CS279 CommandMaps! -->
 <!DOCTYPE html>
-<h1>Designing for You</h1>
+<h1 class="title">Designing for You</h1>
 Help us study user interface design.
 </br></br>
 
-<div style="text-align:left;">
+<div style="text-align:left;margin-left:15%">
 <div style="text-decoration:underline">Instructions:</div>
 <ul>You will see an inset screen of something resembling Microsoft Word 2007.</ul>
 <ul>We will give you an icon as your target.</ul>
