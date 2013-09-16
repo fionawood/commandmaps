@@ -1,3 +1,5 @@
+var I = {};
+
 var x = -100;
   var y = -100;
   var time = 0;
@@ -27,9 +29,14 @@ window.onload = function() {
   Q.setup();
 
 
+  I.interval = null;
+
+
   $("#special").on('click', function(e){ 
     
-    setInterval(draw_circle,30);
+    if (!I.interval) {
+      I.interval = setInterval(draw_circle,30);
+    }
 
     x = e.pageX - this.offsetLeft;
     y = e.pageY - this.offsetTop; 
@@ -39,7 +46,17 @@ window.onload = function() {
     draw_circle();
 
     //$('#status2').html('position = ' + x +', '+ y + " @ " + time); 
-    console.log(Q.validate(x,y));
+    if (Q.validate(x,y)) {
+
+      // correct
+
+      $('#next').show();
+
+    } else {
+
+      // wrong, play sound
+
+    }
 
   }); 
 }

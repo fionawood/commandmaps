@@ -162,10 +162,21 @@ Q.setup = function() {
 
   icons = Q.init(5);
 
-  Q.current = icons[0];
+  Q.current_index = -1;
+
+  Q.init_question();
+
+};
+
+Q.init_question = function() {
+
+  Q.current_index++;
+  Q.current = icons[Q.current_index];
 
   // update div
   $('#label').html(Q.current);
   $('#icon')[0].src = 'gfx/'+Q.current;
 
-};
+  $('#next').hide();
+
+}
