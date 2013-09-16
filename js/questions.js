@@ -345,3 +345,19 @@ Q.show_questionaire = function() {
   $('#experiment').hide();
   $('#questionnaire').show();
 }
+
+Q.submit = function() {
+
+  // here we update the user in the database with the selected values of the questionaire
+  test_user.device = 'touchpad';
+  test_user.preference = 'commandmap';
+  test_user.comments = 'wow!!!';
+  test_user.state = '100';
+
+  DB.store(test_user, function(user) {
+    user = JSON.parse(user);
+    console.log('updated user', user.id);
+
+  });
+
+}
