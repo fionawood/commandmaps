@@ -46,7 +46,7 @@ jQuery(document).ready(function(){
   <body> 
 
     <h2 id="status2">0, 0</h2>
-    <canvas width="500px" height="500px" style="width: 500px; height: 500px; border:1px ridge green;" id="special">
+    <canvas width="800px" height="600px" style="width: 800px; height: 600px; border:1px ridge green;" id="special">
 
     </canvas>
 
