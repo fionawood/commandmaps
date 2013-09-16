@@ -8,6 +8,8 @@ Click = function() {
 
   this.y = 0;
 
+  this.correct = false;
+
   this.click_time = -1;
 
   this.click_currmenu = '';
