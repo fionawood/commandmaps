@@ -73,6 +73,6 @@ foreach($generic_object as $key => $value) {
 }
 
 // store the object in the database
-Mapper::add($real_object);
+echo Mapper::add($real_object);
 
 ?>
