@@ -28,6 +28,7 @@
 	function draw_circle(){
         var c=document.getElementById("special"); 
         var ctx= c.getContext("2d");
+    	ctx.clearRect(0,0,800,600);
         ctx.beginPath();
         ctx.arc(x, y, radius,0, 2*Math.PI);
 		ctx.strokeStyle = 'rgba(200,0,0,'+alpha+')';
