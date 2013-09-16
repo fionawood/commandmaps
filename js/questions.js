@@ -118,7 +118,7 @@ Q.init = function(how_many, need_switch) {
         valid = (i==0 || (icons[i-1] != icons[i]));
 
         if (!valid) {
-          console.log('found invalid sequence', icons[i-1], icons[i]);
+          console.log('fixing invalid repeated icon: ', icons[i-1], icons[i]);
         }
 
       } 

@@ -60,6 +60,7 @@ window.onload = function() {
       click.user_id = Q.user.id;
       click.x = x;
       click.y = y;
+      click.icon = Q.current;
       click.correct = 1;
       click.click_time = 1;
       click.click_currmenu = 'view';
@@ -97,6 +98,7 @@ window.onload = function() {
       click.x = x;
       click.y = y;
       click.correct = 0;
+      click.icon = Q.current;
       click.click_time = 1;
       click.click_currmenu = 'view';
 
