@@ -165,10 +165,16 @@ Q.r = function() {
 
 Q.validate = function(x,y) {
 
-  var x1 = Q.Commandmap_icons_catalog[Q.current]['x1'];
-  var x2 = Q.Commandmap_icons_catalog[Q.current]['x2'];
-  var y1 = Q.Commandmap_icons_catalog[Q.current]['y1'];
-  var y2 = Q.Commandmap_icons_catalog[Q.current]['y2'];
+  var catalog = Q.Commandmap_icons_catalog;
+
+  if (Q.sequence == 'Ribbon') {
+    catalog = Q.Ribbon_icons_catalog;
+  }
+
+  var x1 = catalog[Q.current]['x1'];
+  var x2 = catalog[Q.current]['x2'];
+  var y1 = catalog[Q.current]['y1'];
+  var y2 = catalog[Q.current]['y2'];
 
   return ((x <= x2 && x >= x1) && (y <= y2 && y >= y1));
 
