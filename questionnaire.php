@@ -2,7 +2,7 @@
 require_once('header.php');
 ?>
 
-<div style="text-align:left;margin:5%;">
+<div style="text-align:left;margin-left:5%;">
 <h3>Some questions:</h3>
 <b>Which interface did you prefer?</b></br></br>
 <form>
