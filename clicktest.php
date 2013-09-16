@@ -22,6 +22,9 @@
 	var x = -1;
 	var y = -1;
 	var time = 0;
+	var radius = 10;
+	// var alpha = 1;
+
 	function draw_circle(){
         var c=document.getElementById("special"); 
         var ctx= c.getContext("2d");
@@ -32,18 +35,17 @@
         ctx.strokeStyle="red";
         ctx.stroke();
 		
-		// if(radius >= 100) {
-		// 	radius = 0;
-		// } else {
-		// 	radius+=1;
-		// }
+		if(radius >= 100) {
+			radius = 0;
+		} else {
+			radius+=10;
+		}
 		
 		// if(alpha <= 0){
 		// 	alpha=1;
 		// } else {
 		// 	alpha-=.01;
 		// }
-		//ctx.restore();
 	}
 
 $(window).load(function(){
