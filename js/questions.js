@@ -96,6 +96,9 @@ Q.Ribbon_icons_catalog = {
 
 // randomize the sets
 Q.sequence = shuffle(['Commandmap','Ribbon']);
+Q.current_sequence = Q.sequence[0];
+// start with practice mode
+Q.practice = true;
 
 Q.init = function(how_many, need_switch) {
 
@@ -173,7 +176,10 @@ Q.validate = function(x,y) {
 
 Q.setup = function() {
 
-  Q.icons = Q.init(15);
+  if (Q.practice)
+    Q.icons = Q.init(5);
+  else
+    Q.icons = Q.init(10);
 
   Q.current_index = -1;
 
@@ -187,12 +193,27 @@ Q.setup = function() {
     Q.user = JSON.parse(user);
   });
 
+  console.log('PRACTICE MODE:', Q.practice, 'QUESTION:', Q.current_index+1, '/', Q.icons.length);
 
 };
 
 Q.init_question = function() {
 
+  $('#overlay').hide();
+
   Q.current_index++;
+
+  // check if we are at the end of the current section
+  if (Q.current_index > Q.icons.length) {
+
+    console.log('END OF SESSION');
+  
+    Q.next_section();
+
+    return;
+
+  }
+
   Q.current = Q.icons[Q.current_index];
 
   // update div
@@ -207,5 +228,23 @@ Q.init_question = function() {
 
   // start timing
   Q.time_start = Date.now();
+
+}
+
+Q.next_section = function() {
+
+  // check if we just completed a real trial session
+  if (!Q.practice) {
+
+    // switch to the next sequence entry
+    Q.current_sequence = Q.sequence[1];
+
+  }
+
+  // alternate the practice mode
+  Q.practice != Q.practice;
+
+  // re-setup
+  Q.setup();
 
 }
