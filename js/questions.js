@@ -167,7 +167,7 @@ Q.validate = function(x,y) {
 
   var catalog = Q.Commandmap_icons_catalog;
 
-  if (Q.sequence == 'Ribbon') {
+  if (Q.current_sequence == 'Ribbon') {
     catalog = Q.Ribbon_icons_catalog;
   }
 
