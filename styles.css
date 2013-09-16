@@ -120,3 +120,12 @@
 {
     color: #296A6B;
 }
+
+/* centers next experiment question */
+#next
+{
+    position: absolute;
+    margin-left: -100px;
+    left: 50%;
+    bottom: 50%;
+}
