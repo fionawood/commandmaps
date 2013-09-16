@@ -51,6 +51,7 @@ window.onload = function() {
     if (Q.validate(x,y)) {
 
       // correct
+      $('#overlay').show();
 
       // get time
       var delta = Date.now() - Q.time_start;
@@ -79,6 +80,7 @@ window.onload = function() {
           if (I.stored.length == I.clicks.length) {
 
             console.log('all stored');
+            
             $('#next').show();
 
           }
