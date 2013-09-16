@@ -34,7 +34,7 @@
 		ctx.strokeStyle = 'rgba(200,0,0,'+alpha+')';
         ctx.stroke();
 		
-		if(radius <= 20) {
+		if(radius <= 15) {
 			radius+=1;
 			alpha-=.03;
 		} 
