@@ -20,7 +20,6 @@ var x = -100;
       radius+=1;
       alpha-=.07;
     } 
-
   }
 
 window.onload = function() {
@@ -46,6 +45,13 @@ window.onload = function() {
     radius=0;
     alpha=1;
     draw_circle();
+    var menu='none';
+
+    if(Q.current_sequence=='Ribbon')  {
+      menu = Q.validate_menu(x,y);
+      if(menu!='none')
+        $('canvas').css({'background':"url(gfx/ribbon_"+menu+".png)"});
+    }
 
     //$('#status2').html('position = ' + x +', '+ y + " @ " + time); 
     if (Q.validate(x,y)) {
