@@ -1,5 +1,7 @@
 var I = {};
 
+var menu='main';
+
 var x = -100;
   var y = -100;
   var time = 0;
@@ -20,7 +22,6 @@ var x = -100;
       radius+=1;
       alpha-=.07;
     } 
-
   }
 
 window.onload = function() {
@@ -52,8 +53,13 @@ window.onload = function() {
     alpha=1;
     draw_circle();
 
+    if(Q.current_sequence=='Ribbon')  {
+      menu = Q.validate_menu(x,y);
+      $('canvas').css({'background':"url(gfx/ribbon_"+menu+".png)"});
+    }
+
     //$('#status2').html('position = ' + x +', '+ y + " @ " + time); 
-    if (Q.validate(x,y)) {
+    if (Q.validate(x,y,menu)) {
 
       // correct
       $('#overlay').show();

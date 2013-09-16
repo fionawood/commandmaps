@@ -101,7 +101,7 @@ Q.Ribbon_menu_catalog = {
     'y1':30,
     'x2':67,
     'y2':52,
-    'tab':'home'
+    'tab':'file'
   },
   'home':{
     'x1':67,
@@ -122,14 +122,14 @@ Q.Ribbon_menu_catalog = {
     'y1':30,
     'x2':273,
     'y2':52,
-    'tab':'insert'
+    'tab':'pagelayout'
   },
   'references':{
     'x1':273,
     'y1':30,
     'x2':356,
     'y2':52,
-    'tab':'home'  
+    'tab':'references'  
   },
   'mailings':{
     'x1':356,
@@ -143,7 +143,7 @@ Q.Ribbon_menu_catalog = {
     'y1':30,
     'x2':492,
     'y2':52,
-    'tab':'view'
+    'tab':'review'
   },
   'view':{
     'x1':492,
@@ -227,12 +227,14 @@ Q.r = function() {
 
 };
 
-Q.validate = function(x,y) {
+Q.validate = function(x,y,menu) {
 
   var catalog = Q.Commandmap_icons_catalog;
+  var right_menu=true;
 
   if (Q.current_sequence == 'Ribbon') {
     catalog = Q.Ribbon_icons_catalog;
+    right_menu = catalog[Q.current]['tab']==menu;
   }
 
   var x1 = catalog[Q.current]['x1'];
@@ -240,8 +242,19 @@ Q.validate = function(x,y) {
   var y1 = catalog[Q.current]['y1'];
   var y2 = catalog[Q.current]['y2'];
 
-  return ((x <= x2 && x >= x1) && (y <= y2 && y >= y1));
+  return right_menu && ((x <= x2 && x >= x1) && (y <= y2 && y >= y1));
 
+};
+
+Q.validate_menu = function(x,y) {
+
+  var catalog = Q.Ribbon_menu_catalog;
+  if((y > catalog[0][y2]) || (y < catalog[0][y1])) return 'none'; //user did not click a menu option
+
+  for(var i=0; i<catalog.length; i++) {
+    if(x<catalog[i]['x1'])
+      return catalog[i]['tab'];
+  }
 };
 
 Q.setup = function() {
