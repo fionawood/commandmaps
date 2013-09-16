@@ -81,3 +81,11 @@
     position:relative;
     top:1px;
 }
+
+#comments
+{
+    border:2px solid #456879;
+    border-radius:10px;
+    height: 200px;
+    width: 50%;
+}

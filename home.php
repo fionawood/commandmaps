@@ -15,4 +15,4 @@ Help us study user interface design.
 We have 2 interfaces for you to test out! Some practice first. 
 </br><h3>Click the next button below to begin.</h3>
 
-<button class="next-btn" href="prelim.php">Next</button>
+<button class="next-btn" onclick="location.href='monster.krash.com/cs279/commandmaps/prelim-ribbon.php';">Next</button>
