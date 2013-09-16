@@ -97,15 +97,44 @@ Q.Ribbon_icons_catalog = {
 // randomize the sets
 Q.sequence = shuffle(['Commandmap','Ribbon']);
 
-Q.init = function(how_many) {
+Q.init = function(how_many, need_switch) {
 
   var icons = new Array(how_many);
+  var valid = false;
 
-  for (var i=0; i<icons.length; i++) {
+  while(!valid) {
 
-    icons[i] = Q.r();
+    console.log('shuffling..');
+
+    for (var i=0; i<icons.length; i++) {
+
+      icons[i] = Q.r();
+
+    }
+
+    if (need_switch) {
+
+      var switches = 0;
+
+      // check if the 50% tab switch criteria is met
+      for (var i=1; i<icons.length; i++) {
+
+        if (Q.Ribbon_icons_catalog[icons[i-1]]['tab'] != Q.Ribbon_icons_catalog[icons[i]]['tab']) {
+          switches++;
+        }
+
+      } 
+
+      console.log('tab switch', switches);
+
+      valid = (switches >= how_many/2);
+
+    } else {
+      valid = true;
+    }
 
   }
+
 
   return icons;
 
