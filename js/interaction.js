@@ -30,6 +30,8 @@ window.onload = function() {
 
 
   I.interval = null;
+  I.clicks = [];
+  I.stored = [];
 
 
   $("#special").on('click', function(e){ 
@@ -50,11 +52,54 @@ window.onload = function() {
 
       // correct
 
-      $('#next').show();
+      // get time
+      var delta = Date.now() - Q.time_start;
+
+      // store the click
+      var click = new Click();
+      click.user_id = Q.user.id;
+      click.x = x;
+      click.y = y;
+      click.click_time = 1;
+      click.click_currmenu = 'view';
+
+      I.clicks.push(click);
+
+
+      // send ajax to store all clicks in database
+      for(var c=0; c<I.clicks.length; c++) {
+        DB.store(I.clicks[c], function() {
+
+          console.log('stored click');
+
+          I.stored.push(true);
+
+          if (I.stored.length == I.clicks.length) {
+
+            console.log('all stored');
+            $('#next').show();
+
+          }
+
+        });
+      }
+
+      
 
     } else {
 
       // wrong, play sound
+
+      // store click
+      var click = new Click();
+      click.user_id = Q.user.id;
+      click.x = x;
+      click.y = y;
+      click.click_time = 1;
+      click.click_currmenu = 'view';
+
+      I.clicks.push(click);
+
 
     }
 

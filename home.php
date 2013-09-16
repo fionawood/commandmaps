@@ -15,6 +15,9 @@
         <script src='js/util.js'></script>
         <script src='js/questions.js'></script>
         <script src='js/interaction.js'></script>
+        <script src='js/click.model.js'></script>
+        <script src='js/user.model.js'></script>
+        <script src='js/db.js'></script>
 
 
     </head>

@@ -190,6 +190,7 @@ Q.init_question = function() {
 
   // reset all clicks
   I.clicks = [];
+  I.stored = [];
 
   // start timing
   Q.time_start = Date.now();
