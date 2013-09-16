@@ -3,7 +3,7 @@
 <html>
 
     <head>
-        <link href="css/styles.css" rel="stylesheet"/>
+        <link href="styles.css" rel="stylesheet"/>
        
        <?php if (isset($title)): ?>
             <title>it's us. hello!<?= htmlspecialchars($title) ?></title>
