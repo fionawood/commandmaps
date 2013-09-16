@@ -61,13 +61,6 @@ if (!isset($data)) {
 // here we have some data and a type (for sure)
 $object = json_decode($data);
 
-if (!$object) {
-
-  // something went wrong
-  die('could not parse JSON');
-
-}
-
 
 // create an object based on the type
 switch($type) {
