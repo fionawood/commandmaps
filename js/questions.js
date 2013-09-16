@@ -10,9 +10,9 @@ Q.Commandmap_icons_catalog = {
     'tab':'home'
   },
   'center':{
-    'x1':280,
+    'x1':310,
     'y1':75,
-    'x2':310,
+    'x2':333,
     'y2':100,
     'tab':'home'
   },
@@ -57,9 +57,9 @@ Q.Ribbon_icons_catalog = {
     'tab':'home'
   },
   'center':{
-    'x1':280,
+    'x1':310,
     'y1':75,
-    'x2':310,
+    'x2':333,
     'y2':100,
     'tab':'home'
   },
