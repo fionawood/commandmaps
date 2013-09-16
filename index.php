@@ -12,18 +12,6 @@ require_once('header.php');
 require_once('home.php');
 require_once('footer.php');
 
-require_once('mapper.class.php');
-
-require_once('click.model.php');
-
-$click = new Click();
-$click->user_id = 0;
-$click->x = 10;
-$click->y = 11;
-$click->click_time = 1000;
-$click_currmenu = 'view';
-
-Mapper::add($click);
 
 
 ?>
