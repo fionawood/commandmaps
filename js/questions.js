@@ -160,6 +160,10 @@ Q.current_sequence = Q.sequence[0];
 // start with practice mode
 Q.practice = true;
 
+Q.NUMBER_OF_PRACTICE = 1;
+Q.NUMBER_OF_REAL = 2;
+
+
 Q.init = function(how_many, need_switch) {
 
   var icons = new Array(how_many);
@@ -243,9 +247,24 @@ Q.validate = function(x,y) {
 Q.setup = function() {
 
   if (Q.practice)
-    Q.icons = Q.init(1);
-  else
-    Q.icons = Q.init(2);
+    Q.icons = Q.init(Q.NUMBER_OF_PRACTICE);
+  else {
+
+    // make sure that the last icon of the practice is not the first of the real thing
+    var valid = false;
+    while (!valid) {
+      var new_icons = Q.init(Q.NUMBER_OF_REAL);
+
+      valid = (new_icons[0] != Q.icons[Q.icons.length-1]);
+
+      if (!valid) {
+        console.log('avoiding repetitions between practice/real thing.');
+      }
+
+    }
+
+    Q.icons = new_icons;
+  }
 
   Q.current_index = -1;
 
