@@ -47,12 +47,12 @@
 
 $(window).load(function(){
 	
-	var radius = 10;
-	var alpha = 1;
-	var x = 100;
-	var y = 100;
+	// var radius = 10;
+	// var alpha = 1;
+	// var x = 100;
+	// var y = 100;
 	//setInterval(draw_circle,20);
-	draw_circle();
+	// draw_circle();
 
 
 	jQuery(document).ready(function(){
@@ -74,7 +74,7 @@ $(window).load(function(){
 <body>
   <body> 
 
-    <h2 id="status2">0, 0</h2>
+    <h2 id="status2">position = 0, 0</h2>
     <canvas width="800px" height="600px" style="width: 800px; height: 600px; border:1px ridge green;" id="special">
 
     </canvas>
