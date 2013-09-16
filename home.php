@@ -56,7 +56,7 @@ We have 2 interfaces for you to test out! Some practice first.
 </br><h3>Click the next button below to begin.</h3>
 
 <!-- button FROM home TO experiment -->
-<button class="next-btn" onclick="$('#home').hide();$('#experiment').show();$('#bottom').hide();">Next</button>
+<button class="next-btn" onclick="Q.init_experiment();">Next</button>
 </br>
 <div id="bottom">
     CS 279 |  <a>Daniel, Fiona, and Sharon</a>

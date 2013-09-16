@@ -73,13 +73,13 @@ window.onload = function() {
       for(var c=0; c<I.clicks.length; c++) {
         DB.store(I.clicks[c], function() {
 
-          console.log('stored click');
+          //console.log('stored click');
 
           I.stored.push(true);
 
           if (I.stored.length == I.clicks.length) {
 
-            console.log('all stored');
+            //console.log('all stored');
             
             $('#next').show();
 

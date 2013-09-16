@@ -183,8 +183,6 @@ Q.setup = function() {
 
   Q.current_index = -1;
 
-  Q.init_question();
-
   // create the user
   Q.user = new User();
   Q.user.load_time = 100;
@@ -193,7 +191,15 @@ Q.setup = function() {
     Q.user = JSON.parse(user);
   });
 
-  console.log('PRACTICE MODE:', Q.practice, 'QUESTION:', Q.current_index+1, '/', Q.icons.length);
+};
+
+Q.init_experiment = function() {
+
+  $('#home').hide();
+  $('#experiment').show();
+  $('#bottom').hide();
+
+  Q.init_question();
 
 };
 
@@ -204,8 +210,9 @@ Q.init_question = function() {
   Q.current_index++;
 
   // check if we are at the end of the current section
-  if (Q.current_index > Q.icons.length) {
+  if (Q.current_index >= Q.icons.length) {
 
+    // here we can put a hint
     console.log('END OF SESSION');
   
     Q.next_section();
@@ -226,6 +233,8 @@ Q.init_question = function() {
   I.clicks = [];
   I.stored = [];
 
+  console.log('MODE:', Q.current_sequence, 'PRACTICE MODE:', Q.practice, 'QUESTION:', Q.current_index+1, '/', Q.icons.length);
+
   // start timing
   Q.time_start = Date.now();
 
@@ -241,10 +250,13 @@ Q.next_section = function() {
 
   }
 
-  // alternate the practice mode
-  Q.practice != Q.practice;
+  // switch to/from practice mode
+  Q.practice = !Q.practice;
 
   // re-setup
   Q.setup();
+
+  // and start the question
+  Q.init_question();
 
 }
