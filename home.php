@@ -30,7 +30,7 @@
 
 <script type='text/javascript' src='//code.jquery.com/jquery-1.9.1.js'></script>
 
-<link rel="stylesheet" type="text/css" href="/css/result-light.css">
+<!-- <link rel="stylesheet" type="text/css" href="/css/result-light.css"> -->
 
 <style type='text/css' media="screen">
 	canvas, img {display:block margin:lem auto; border:1px solid black;}
@@ -72,7 +72,7 @@ We have 2 interfaces for you to test out! Some practice first.
 	</div>
 <div id="overlay" style="display:none;">	
 	<button id="next" class="next-btn" onclick="Q.init_question();" style="display:none;">Next</button>
-	<button id="done-btn" class="next-btn" onclick="$('#experiment').hide();$('#questionnaire').show();" style="display:none;">Next</button>
+	<button id="done-btn" class="next-btn" onclick="" style="display:none;">Next</button>
 </div>
 </div>
 
