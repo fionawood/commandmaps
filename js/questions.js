@@ -107,7 +107,7 @@ Q.init = function(how_many, need_switch) {
 
   while(!valid) {
 
-    console.log('shuffling..');
+    //console.log('shuffling..');
 
     for (var i=0; i<icons.length; i++) {
 
@@ -121,7 +121,7 @@ Q.init = function(how_many, need_switch) {
         valid = (i==0 || (icons[i-1] != icons[i]));
 
         if (!valid) {
-          console.log('fixing invalid repeated icon: ', icons[i-1], icons[i]);
+          //console.log('fixing invalid repeated icon: ', icons[i-1], icons[i]);
         }
 
       } 
@@ -141,7 +141,7 @@ Q.init = function(how_many, need_switch) {
 
       } 
 
-      console.log('tab switch', switches);
+      //console.log('tab switch', switches);
 
       valid = (switches >= how_many/2);
 
@@ -177,11 +177,15 @@ Q.validate = function(x,y) {
 Q.setup = function() {
 
   if (Q.practice)
-    Q.icons = Q.init(5);
+    Q.icons = Q.init(1);
   else
-    Q.icons = Q.init(10);
+    Q.icons = Q.init(2);
 
   Q.current_index = -1;
+
+};
+
+Q.init_experiment = function() {
 
   // create the user
   Q.user = new User();
@@ -189,17 +193,14 @@ Q.setup = function() {
   DB.store(Q.user, function(user) {
     console.log('stored user');
     Q.user = JSON.parse(user);
+
+    $('#home').hide();
+    $('#experiment').show();
+    $('#bottom').hide();
+
+    Q.init_question();
+
   });
-
-};
-
-Q.init_experiment = function() {
-
-  $('#home').hide();
-  $('#experiment').show();
-  $('#bottom').hide();
-
-  Q.init_question();
 
 };
 
@@ -245,6 +246,13 @@ Q.next_section = function() {
   // check if we just completed a real trial session
   if (!Q.practice) {
 
+    // check if we are all done
+    if (Q.current_sequence == Q.sequence[1]) {
+
+      Q.show_questionaire();
+
+    }
+
     // switch to the next sequence entry
     Q.current_sequence = Q.sequence[1];
 
@@ -259,4 +267,9 @@ Q.next_section = function() {
   // and start the question
   Q.init_question();
 
+}
+
+Q.show_questionaire = function() {
+  $('#experiment').hide();
+  $('#questionnaire').show();
 }
