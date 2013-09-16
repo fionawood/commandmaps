@@ -125,9 +125,9 @@
 #next
 {
     position: absolute;
-    margin-left: -100px;
-    left: 50%;
-    bottom: 50%;
+    left: 500px;
+    bottom: 400px;
+    margin-left: 10%;
 }
 
 /* overlay opacity on whole screen */
