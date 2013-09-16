@@ -35,7 +35,7 @@ canvas {
 	var radius2 = 100;
 
 	function draw_ex01(){
-		var canvas = document.getElementById('ex01');
+		var canvas = document.getElementById('special');
 		var ctx = canvas.getContext('2d');
 		ctx.clearRect(0,0,canvas.width,canvas.height);
 		ctx.save();
@@ -65,7 +65,6 @@ canvas {
 		jQuery(document).ready(function(){
 
 		    $("#special").click(function(e){ 
-
 		        var x = e.pageX - this.offsetLeft;
 		        var y = e.pageY - this.offsetTop; 
 	        	$('#status2').html(x +', '+ y); 
@@ -77,7 +76,7 @@ canvas {
 <body onload='init()'>
 
 <h2 id="status2">0, 0</h2>
-<canvas id="ex01" width='400px' height='300px'></canvas>
+<canvas id="special" width='400px' height='300px'></canvas>
 
 </body>
 </html>
