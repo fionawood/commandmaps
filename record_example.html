@@ -3,23 +3,84 @@
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="js/click.model.js"></script>
+<script type="text/javascript" src="js/user.model.js"></script>
 <script type="text/javascript" src="js/db.js"></script>
 
 <script type='text/javascript'>
 
 window.onload = function() {
 
-  // create test click
-  var test_click = new Click();
-  test_click.user_id = 0;
-  test_click.x = 10;
-  test_click.y = 20;
-  test_click.click_time = 10000000;
-  test_click.click_currmenu = 'view';
-  // send ajax to store in database
-  DB.store(test_click, function(new_id) {
-    alert('stored. '+new_id);
+  // first step: create a user
+  var test_user = new User();
+  test_user.load_time = 100;
+  DB.store(test_user, function(user) {
+    console.log('stored user');
+    test_user = JSON.parse(user);
+
+
+
+    // create test click 1
+    var test_click = new Click();
+    test_click.user_id = test_user.id;
+    test_click.x = 10;
+    test_click.y = 20;
+    test_click.click_time = 1;
+    test_click.click_currmenu = 'view';
+    // send ajax to store in database
+    DB.store(test_click, function(click) {
+      click = JSON.parse(click);
+      console.log('stored click ' + click.id);
+
+      // create test click 2
+      var test_click = new Click();
+      test_click.user_id = test_user.id;
+      test_click.x = 50;
+      test_click.y = 60;
+      test_click.click_time = 2;
+      test_click.click_currmenu = 'home';
+      // send ajax to store in database
+      DB.store(test_click, function(click) {
+        click = JSON.parse(click);
+        console.log('stored click ' + click.id);
+
+        // create test click 3
+        var test_click = new Click();
+        test_click.user_id = test_user.id;
+        test_click.x = 120;
+        test_click.y = 130;
+        test_click.click_time = 3;
+        test_click.click_currmenu = 'insert';
+        // send ajax to store in database
+        DB.store(test_click, function(click) {
+          click = JSON.parse(click);
+          console.log('stored click ' + click.id);
+
+
+
+          // now update the user preferences etc.
+          test_user.device = 'touchpad';
+          test_user.preference = 'commandmap';
+          test_user.comments = 'wow!!!';
+          test_user.state = '100';
+
+          DB.store(test_user, function(user) {
+            user = JSON.parse(user);
+            console.log('updated user', user.id);
+
+          });
+
+        });
+
+
+      });
+
+    });
+
   });
+
+
+
+
 
 }
 
