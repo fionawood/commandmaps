@@ -37,8 +37,9 @@
 		
 		if(radius <= 15) {
 			radius+=1;
-			alpha-=.05;
+			alpha-=.07;
 		} 
+
 	}
 
 $(window).load(function(){
