@@ -30,8 +30,8 @@
         var ctx= c.getContext("2d");
         ctx.beginPath();
         ctx.arc(x, y, radius,0, 2*Math.PI);
-		ctx.fillStyle = 'rgba(0,100,200,'+alpha+')';
-        ctx.fill();
+		ctx.strokeStyle = 'rgba(0,100,200,'+alpha+')';
+        ctx.stroke();
 		
 		if(radius >= 20) {
 			radius = 0;
