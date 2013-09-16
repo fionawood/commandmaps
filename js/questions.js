@@ -94,12 +94,71 @@ Q.Ribbon_icons_catalog = {
 
 }
 
+Q.Ribbon_menu_catalog = {
+  
+  'file':{
+    'x1':10,
+    'y1':30,
+    'x2':67,
+    'y2':52,
+    'tab':'home'
+  },
+  'home':{
+    'x1':67,
+    'y1':30,
+    'x2':125,
+    'y2':52,
+    'tab':'home'
+  },
+  'insert':{
+    'x1':125,
+    'y1':30,
+    'x2':187,
+    'y2':52,
+    'tab':'insert'
+  },
+  'pagelayout':{
+    'x1':187,
+    'y1':30,
+    'x2':5,
+    'y2':52,
+    'tab':'insert'
+  },
+  'references':{
+    'x1':390,
+    'y1':30,
+    'x2':420,
+    'y2':52,
+    'tab':'home'  
+  },
+  'mailings':{
+    'x1':325,
+    'y1':30,
+    'x2':378,
+    'y2':52,
+    'tab':'view'
+  },
+  'review':{
+    'x1':325,
+    'y1':30,
+    'x2':378,
+    'y2':52,
+    'tab':'view'
+  },
+  'view':{
+    'x1':490,
+    'y1':30,
+    'x2':555,
+    'y2':52,
+    'tab':'view'
+  }
+} 
+
 // randomize the sets
 Q.sequence = shuffle(['Commandmap','Ribbon']);
 Q.current_sequence = Q.sequence[0];
 // start with practice mode
 Q.practice = true;
-Q.Ribbon_menu = ['Main','Insert','View'];
 
 Q.init = function(how_many, need_switch) {
 
