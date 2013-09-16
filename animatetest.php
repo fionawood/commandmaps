@@ -19,7 +19,6 @@
   
 
 <script type='text/javascript'>//<![CDATA[ 
-
 	function init(){
 		setInterval(draw_circle,20);
 	}
@@ -54,30 +53,7 @@
 	    
 	    ctx.restore();
 	}
-
-$(window).load(function(){
-
-	jQuery(document).ready(function(){
-
-	     $("#special").click(function(e){ 
-
-	        var x = e.pageX - this.offsetLeft;
-	        var y = e.pageY - this.offsetTop; 
-
-	        var c=document.getElementById("special"); 
-	        var ctx= c.getContext("2d");
-	        ctx.beginPath();
-	        ctx.arc(x, y, 5,0, 2*Math.PI);
-	        ctx.fill();
-	        ctx.strokeStyle="red";
-	        ctx.stroke();
-
-	        $('#status2').html(x +', '+ y); 
-	   }); 
-	})  
-});//]]>  
-
-</script>
+	</script>
 
 
 </head>
