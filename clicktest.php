@@ -46,7 +46,7 @@ $(window).load(function(){
 	// var alpha = 1;
 	// var x = 100;
 	// var y = 100;
-	setInterval(draw_circle,20);
+	setInterval(draw_circle,30);
 	// draw_circle();
 
 
