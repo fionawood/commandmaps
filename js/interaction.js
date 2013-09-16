@@ -1,5 +1,7 @@
 var I = {};
 
+var menu='main';
+
 var x = -100;
   var y = -100;
   var time = 0;
@@ -45,16 +47,14 @@ window.onload = function() {
     radius=0;
     alpha=1;
     draw_circle();
-    var menu='none';
 
     if(Q.current_sequence=='Ribbon')  {
       menu = Q.validate_menu(x,y);
-      if(menu!='none')
-        $('canvas').css({'background':"url(gfx/ribbon_"+menu+".png)"});
+      $('canvas').css({'background':"url(gfx/ribbon_"+menu+".png)"});
     }
 
     //$('#status2').html('position = ' + x +', '+ y + " @ " + time); 
-    if (Q.validate(x,y)) {
+    if (Q.validate(x,y,menu)) {
 
       // correct
       $('#overlay').show();
