@@ -94,6 +94,66 @@ Q.Ribbon_icons_catalog = {
 
 }
 
+Q.Ribbon_menu_catalog = {
+  
+  'file':{
+    'x1':10,
+    'y1':30,
+    'x2':67,
+    'y2':52,
+    'tab':'home'
+  },
+  'home':{
+    'x1':67,
+    'y1':30,
+    'x2':125,
+    'y2':52,
+    'tab':'home'
+  },
+  'insert':{
+    'x1':125,
+    'y1':30,
+    'x2':185,
+    'y2':52,
+    'tab':'insert'
+  },
+  'pagelayout':{
+    'x1':185,
+    'y1':30,
+    'x2':273,
+    'y2':52,
+    'tab':'insert'
+  },
+  'references':{
+    'x1':273,
+    'y1':30,
+    'x2':356,
+    'y2':52,
+    'tab':'home'  
+  },
+  'mailings':{
+    'x1':356,
+    'y1':30,
+    'x2':430,
+    'y2':52,
+    'tab':'view'
+  },
+  'review':{
+    'x1':430,
+    'y1':30,
+    'x2':492,
+    'y2':52,
+    'tab':'view'
+  },
+  'view':{
+    'x1':492,
+    'y1':30,
+    'x2':585,
+    'y2':52,
+    'tab':'view'
+  }
+} 
+
 // randomize the sets
 Q.sequence = shuffle(['Commandmap','Ribbon']);
 Q.current_sequence = Q.sequence[0];
