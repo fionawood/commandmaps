@@ -230,12 +230,16 @@ Q.init_question = function() {
   
   if(Q.current_sequence=='Ribbon')
     $('canvas').css({'background':"url(gfx/ribbon_main.png)"});
+  else
+    $('canvas').css({'background':"url(gfx/commandmap.png)"});
 
   $('#next').hide();
 
   // reset all clicks
   I.clicks = [];
   I.stored = [];
+
+  $('#progress').html(Q.current_index+1+'/'+Q.icons.length);
 
   console.log('MODE:', Q.current_sequence, 'PRACTICE MODE:', Q.practice, 'QUESTION:', Q.current_index+1, '/', Q.icons.length);
 
