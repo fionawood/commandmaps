@@ -219,7 +219,6 @@ Q.init_question = function() {
     Q.next_section();
 
     return;
-
   }
 
   Q.current = Q.icons[Q.current_index];
@@ -230,6 +229,9 @@ Q.init_question = function() {
   
   if(Q.current_sequence=='Ribbon')
     $('canvas').css({'background':"url(gfx/ribbon_main.png)"});
+  else
+    $('canvas').css({'background':"url(gfx/commandmap.png)"});
+
 
   $('#next').hide();
 
