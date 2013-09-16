@@ -30,13 +30,13 @@
         var ctx= c.getContext("2d");
         ctx.beginPath();
         ctx.arc(x, y, radius,0, 2*Math.PI);
-        ctx.fillStyle="green";
+        ctx.fillStyle="red";
         ctx.fill();
 		
-		if(radius >= 100) {
+		if(radius >= 20) {
 			radius = 0;
 		} else {
-			radius+=10;
+			radius+=1;
 		}
 		
 		// if(alpha <= 0){
