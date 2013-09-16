@@ -31,6 +31,7 @@
     	ctx.clearRect(0,0,800,600);
         ctx.beginPath();
         ctx.arc(x, y, radius,0, 2*Math.PI);
+        ctx.lineWidth = 5;
 		ctx.strokeStyle = 'rgba(200,0,0,'+alpha+')';
         ctx.stroke();
 		
