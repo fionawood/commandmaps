@@ -261,7 +261,9 @@ Q.next_section = function() {
     // check if we are all done
     if (Q.current_sequence == Q.sequence[1]) {
 
-      Q.show_questionaire();
+      Q.show_questionnaire();
+
+      return;
 
     }
 
@@ -281,22 +283,38 @@ Q.next_section = function() {
 
 }
 
-Q.show_questionaire = function() {
+Q.show_questionnaire = function() {
   $('#experiment').hide();
   $('#questionnaire').show();
 }
 
 Q.submit = function() {
 
-  // here we update the user in the database with the selected values of the questionaire
-  test_user.device = 'touchpad';
-  test_user.preference = 'commandmap';
-  test_user.comments = 'wow!!!';
-  test_user.state = '100';
+  var device = $('#device_form input:radio:checked').val();
+  var preference = $('#interface_form input:radio:checked').val();
+  var comments = $('#comments_form textarea').val();
 
-  DB.store(test_user, function(user) {
-    user = JSON.parse(user);
-    console.log('updated user', user.id);
+  if (!device || !preference) {
+
+    alert('Please specify your preference and your device!');
+
+    return;
+
+  }
+
+  // here we update the user in the database with the selected values of the questionaire
+  Q.user.device = device;
+  Q.user.preference = preference;
+  Q.user.comments = comments;
+  // 100% done
+  Q.user.state = '100';
+
+  DB.store(Q.user, function(user) {
+    Q.user = JSON.parse(user);
+    console.log('updated user', Q.user.id);
+
+    $('#questionnaire').hide();
+    $('#finish').show();
 
   });
 
