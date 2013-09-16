@@ -31,6 +31,7 @@ jQuery(document).ready(function(){
         var ctx= c.getContext("2d");
         ctx.beginPath();
         ctx.arc(x, y, 5,0, 2*Math.PI);
+        ctx.fill();
         ctx.strokeStyle="red";
         ctx.stroke();
 
@@ -47,7 +48,7 @@ jQuery(document).ready(function(){
   <body> 
 
     <h2 id="status2">0, 0</h2>
-    <canvas width="800px" height="600px" style="width: 800px; height: 600px; border:1px ridge green;" id="special">
+    <canvas width="800px" height="600px" style="width: 800px; height: 600px; border:1px ridge green;" id="special" onclick=>
 
     </canvas>
 
