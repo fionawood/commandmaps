@@ -62,7 +62,7 @@ $(window).load(function(){
 	        var x = e.pageX - this.offsetLeft;
 	        var y = e.pageY - this.offsetTop; 
 	        var t = e.timeStamp;
-	        draw_circle();
+	        // draw_circle();
 
 	        $('#status2').html('position = ' + x +', '+ y + " @ " + t); 
 	   }); 
