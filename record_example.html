@@ -17,8 +17,8 @@ window.onload = function() {
   test_click.click_time = 10000000;
   test_click.click_currmenu = 'view';
   // send ajax to store in database
-  DB.store(test_click, function() {
-    alert('stored.');
+  DB.store(test_click, function(new_id) {
+    alert('stored. '+new_id);
   });
 
 }
