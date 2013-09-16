@@ -166,6 +166,15 @@ Q.setup = function() {
 
   Q.init_question();
 
+  // create the user
+  Q.user = new User();
+  Q.user.load_time = 100;
+  DB.store(Q.user, function(user) {
+    console.log('stored user');
+    Q.user = JSON.parse(user);
+  });
+
+
 };
 
 Q.init_question = function() {
@@ -178,5 +187,11 @@ Q.init_question = function() {
   $('#icon')[0].src = 'gfx/'+Q.current;
 
   $('#next').hide();
+
+  // reset all clicks
+  I.clicks = [];
+
+  // start timing
+  Q.time_start = Date.now();
 
 }
