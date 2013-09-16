@@ -22,7 +22,7 @@
 	var x = -1;
 	var y = -1;
 	var time = 0;
-	var radius = 10;
+	var radius = 0;
 	var alpha = 1;
 
 	function draw_circle(){
@@ -30,20 +30,13 @@
         var ctx= c.getContext("2d");
         ctx.beginPath();
         ctx.arc(x, y, radius,0, 2*Math.PI);
-		ctx.strokeStyle = 'rgba(0,100,200,'+alpha+')';
+		ctx.strokeStyle = 'rgba(0,200,200,'+alpha+')';
         ctx.stroke();
 		
-		if(radius >= 20) {
-			radius = 0;
-		} else {
+		if(radius <= 20) {
 			radius+=1;
-		}
-		
-		if(alpha <= 0){
-			alpha=1;
-		} else {
 			alpha-=.01;
-		}
+		} 
 	}
 
 $(window).load(function(){
@@ -63,6 +56,7 @@ $(window).load(function(){
 	        x = e.pageX - this.offsetLeft;
 	        y = e.pageY - this.offsetTop; 
 	        time = e.timeStamp;
+	        radius=0;
 	        draw_circle();
 
 	        $('#status2').html('position = ' + x +', '+ y + " @ " + time); 
