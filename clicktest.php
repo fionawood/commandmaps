@@ -37,7 +37,7 @@
 		
 		if(radius <= 15) {
 			radius+=1;
-			alpha-=.03;
+			alpha-=.05;
 		} 
 	}
 
