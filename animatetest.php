@@ -76,7 +76,7 @@ canvas {
 <body onload='init()'>
 
 <h2 id="status2">0, 0</h2>
-<canvas id="special" width='400px' height='300px'></canvas>
+<canvas id="special" width='500px' height='500px'></canvas>
 
 </body>
 </html>
