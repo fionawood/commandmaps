@@ -8,6 +8,7 @@ define('__COMMANDMAPS_ENTRY_POINT__', 666);
 // include the configuration
 require_once ('config.inc.php');
 
+require_once('home.php');
 
 require_once('mapper.class.php');
 
