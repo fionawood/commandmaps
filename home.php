@@ -85,8 +85,8 @@ We have 2 interfaces for you to test out! Some practice first.
 <form>
 &nbsp;&nbsp;&nbsp;
 <input type="radio" name="device" value="mouse">Mouse &nbsp;&nbsp;&nbsp;
-<input type="radio" name="device" value="trackpad">Trackpad
-</form>
+<input type="radio" name="device" value="trackpad">Trackpad &nbsp;&nbsp;&nbsp;
+<input type="radio" name="device" value="mouse">Other
 </br></br>
 <b>Comments?</b>
 <div style="color:grey;font-size:small"><i>technical difficulties? thoughts in general?</i></div></br>
