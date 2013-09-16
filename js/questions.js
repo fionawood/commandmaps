@@ -108,7 +108,20 @@ Q.init = function(how_many, need_switch) {
 
     for (var i=0; i<icons.length; i++) {
 
-      icons[i] = Q.r();
+      var valid = false;
+      while (!valid) {
+
+        // re-assign a random icon
+        icons[i] = Q.r();
+
+        // check if we have duplicates
+        valid = (i==0 || (icons[i-1] != icons[i]));
+
+        if (!valid) {
+          console.log('found invalid sequence', icons[i-1], icons[i]);
+        }
+
+      } 
 
     }
 
@@ -160,7 +173,7 @@ Q.validate = function(x,y) {
 
 Q.setup = function() {
 
-  icons = Q.init(5);
+  Q.icons = Q.init(15);
 
   Q.current_index = -1;
 
@@ -180,7 +193,7 @@ Q.setup = function() {
 Q.init_question = function() {
 
   Q.current_index++;
-  Q.current = icons[Q.current_index];
+  Q.current = Q.icons[Q.current_index];
 
   // update div
   $('#label').html(Q.current);
