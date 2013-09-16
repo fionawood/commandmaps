@@ -79,7 +79,6 @@
 }
 .next-btn:active {
     position:relative;
-    top:1px;
 }
 
 /* textbox in questionnaire */
