@@ -37,9 +37,14 @@ window.onload = function() {
 
   $("#special").on('click', function(e){ 
     
+    // get time
+    var delta = Date.now() - Q.time_start;
+
     if (!I.interval) {
       I.interval = setInterval(draw_circle,30);
     }
+
+
 
     x = e.pageX - this.offsetLeft;
     y = e.pageY - this.offsetTop; 
@@ -59,9 +64,6 @@ window.onload = function() {
       // correct
       $('#overlay').show();
 
-      // get time
-      var delta = Date.now() - Q.time_start;
-
       // store the click
       var click = new Click();
       click.user_id = Q.user.id;
@@ -69,7 +71,7 @@ window.onload = function() {
       click.y = y;
       click.icon = Q.current;
       click.correct = 1;
-      click.click_time = 1;
+      click.click_time = delta;
       click.click_currmenu = 'view';
 
       I.clicks.push(click);
@@ -105,7 +107,7 @@ window.onload = function() {
       click.y = y;
       click.correct = 0;
       click.icon = Q.current;
-      click.click_time = 1;
+      click.click_time = delta;
       click.click_currmenu = 'view';
 
       I.clicks.push(click);

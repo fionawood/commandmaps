@@ -91,7 +91,8 @@ We have 2 interfaces for you to test out! Some practice first.
 &nbsp;&nbsp;&nbsp;
 <input type="radio" name="device" value="mouse">Mouse &nbsp;&nbsp;&nbsp;
 <input type="radio" name="device" value="trackpad">Trackpad &nbsp;&nbsp;&nbsp;
-<input type="radio" name="device" value="mouse">Other
+<input type="radio" name="device" value="trackball">Trackball &nbsp;&nbsp;&nbsp;
+<input type="radio" name="device" value="other">Other
 </form>
 </br></br>
 <b>Comments?</b>
