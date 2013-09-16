@@ -62,7 +62,15 @@ $(window).load(function(){
 	        var x = e.pageX - this.offsetLeft;
 	        var y = e.pageY - this.offsetTop; 
 	        var t = e.timeStamp;
-	        // draw_circle();
+	        
+	        var c=document.getElementById("special"); 
+	        var ctx= c.getContext("2d");
+	        ctx.beginPath();
+	        ctx.arc(x, y, 5,0, 2*Math.PI);
+	        ctx.fillStyle="red";
+	        ctx.fill();
+	        ctx.strokeStyle="red";
+	        ctx.stroke();
 
 	        $('#status2').html('position = ' + x +', '+ y + " @ " + t); 
 	   }); 
