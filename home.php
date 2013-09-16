@@ -116,3 +116,33 @@ We have 2 interfaces for you to test out! Some practice first.
 		<canvas width="800px" height="600px" style="width: 800px; height: 600px; border:1px ridge green;" id="special"></canvas>
 	</div>
 </div>
+
+<div id="questionnaire" style="text-align:left;margin-left:5%;display:none;">
+<h3>Some questions:</h3>
+<b>Which interface did you prefer?</b></br></br>
+<form>
+&nbsp;&nbsp;&nbsp;
+<input type="radio" name="preference" value="ribbons">Ribbons &nbsp;&nbsp;&nbsp;
+<input type="radio" name="preference" value="cmdmps">Commandmaps
+</form>
+</br></br>
+<b>What device are you using on your computer?</b></br></br>
+<form>
+&nbsp;&nbsp;&nbsp;
+<input type="radio" name="device" value="mouse">Mouse &nbsp;&nbsp;&nbsp;
+<input type="radio" name="device" value="trackpad">Trackpad
+</form>
+</br></br>
+<b>Comments?</b>
+<div style="color:grey;font-size:small"><i>technical difficulties? thoughts in general?</i></div></br>
+<form method="post" action="">
+<textarea name="comments" id="comments" cols="25" rows="5">
+</textarea><br><br>
+<button class="next-btn" type="submit" onclick="location.href='finish.php';" style="margin-left:5px;">Next</button>
+</form>
+</div>
+
+<div id="finish" style="display:none;">
+	<h2>Thank you for participating in our study! We really appreciate your help.</h2>
+	<img src="http://i46.tinypic.com/2s7j7yq.jpg"><img src="http://i46.tinypic.com/2s7j7yq.jpg">
+</div>
