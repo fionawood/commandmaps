@@ -5,8 +5,7 @@ Help us study user interface design.
 </br></br>
 
 <div style="text-align:left;">
-Instructions:
-</br>
+<div style="text-decoration:underline">Instructions:</div>
 <ul>You will see an inset screen of something resembling Microsoft Word 2007.</ul>
 <ul>We will give you an icon as your target.</ul>
 <ul>Find and click on that target in the inset screen.</ul>

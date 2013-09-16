@@ -43,14 +43,13 @@ if (!isset($type)) {
 // we need some data
 if (isset($_GET['data'])) {
 
-  $data = $_GET['data'];
+  $data = base64_decode($_GET['data']);
 
 } else if (isset($_POST['data'])) {
 
-  $data = $_POST['data'];
+  $data = base64_decode($_POST['data']);
 
 }
-
 
 if (!isset($data)) {
 
@@ -59,28 +58,21 @@ if (!isset($data)) {
 }
 
 // here we have some data and a type (for sure)
-$object = json_decode($data);
-
+$generic_object = json_decode($data);
 
 // create an object based on the type
-switch($type) {
-
-  case 'click':
-
-    
-
-    break;
-
-}
+$real_object = new $type();
 
 // loop through all properties of the JSON object
-foreach($object as $key => $value) {
+foreach($generic_object as $key => $value) {
 
-  echo $key."->".$value;
+  if ($key == '_classname') continue;
 
+  $real_object->$key = $value;
 
 }
 
-
+// store the object in the database
+Mapper::add($real_object);
 
 ?>
