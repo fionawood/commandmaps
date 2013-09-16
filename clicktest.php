@@ -62,7 +62,7 @@ $(window).load(function(){
 	        var x = e.pageX - this.offsetLeft;
 	        var y = e.pageY - this.offsetTop; 
 
-	        $('#status2').html(x +', '+ y); 
+	        $('#status2').html('position = ' + x +', '+ y); 
 	   }); 
 	})  
 });//]]>  
