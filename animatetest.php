@@ -1,74 +1,67 @@
 
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title> - jsFiddle demo</title>
-  
-  <script type='text/javascript' src='//code.jquery.com/jquery-1.9.1.js'></script>
-  
-  
-  
-  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
-  
-  <style type='text/css' media="screen">
-  	canvas, img {display:block margin:lem auto; border:1px solid black;}
-  	canvas { background:url(http://monster.krash.net/cs279/commandmaps/gfx/commandmap.png);}
- 
-  </style>
-  
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../stylesheet.css" >
 
-<script type='text/javascript'>//<![CDATA[ 
+<title>Javascript Canvas Animation</title>
+<style>
+pre { 
+border-left:3px double blue;
+color:red;
+padding-left:10px;
+}
+canvas {
+	border:1px solid black;
+	-moz-box-shadow:3px 3px 2px #ccc;
+	-webkit-box-shadow:3px 3px 2px #ccc;
+	box-shadow:3px 3px 2px #ccc;
+	margin:5px;
+}
+
+</style>
+<script>
+
 	function init(){
-		setInterval(draw_circle,20);
+		
+		setInterval(draw_ex01,20);
 	}
-	var radius=10;
-	var alpha = 0;
+	
+	var radius = 10;
+	var alpha = 1;
+	var angle = 0;
+	var radius2 = 100;
 
-
-	function draw_circle(){
-	    var canvas = document.getElementById('special');
-	    var ctx = canvas.getContext('2d');
-	    ctx.clearRect(0,0,canvas.width,canvas.height);
-	    
-	    ctx.save();
-	    
-	    ctx.translate(canvas.width/2,canvas.height/2);
-	    ctx.fillStyle = 'rgba(0,100,200,'+alpha+')';
-	    ctx.beginPath();
-	    ctx.arc(0,0,radius,0,Math.PI*2,false);
-	    ctx.fill();
-	    
-	    if(radius >= 100) {
-	        radius = 0;
-	    } else {
-	        radius+=1;
-	    }
-	    
-	    if(alpha <= 0){
-	        alpha=1;
-	    } else {
-	        alpha-=.01;
-	    }
-	    
-	    ctx.restore();
+	function draw_ex01(){
+		var canvas = document.getElementById('ex01');
+		var ctx = canvas.getContext('2d');
+		ctx.clearRect(0,0,canvas.width,canvas.height);
+		ctx.save();
+		ctx.translate(canvas.width/2,canvas.height/2);
+		ctx.fillStyle = 'rgba(0,100,200,'+alpha+')';
+		ctx.beginPath();
+		ctx.arc(0,0,radius,0,Math.PI*2,false);
+		ctx.fill();
+		
+		if(radius >= 100) {
+			radius = 0;
+		} else {
+			radius+=1;
+		}
+		
+		if(alpha <= 0){
+			alpha=1;
+		} else {
+			alpha-=.01;
+		}
+		ctx.restore();
 	}
-	</script>
-
-
+</script>
 </head>
-<body>
-  <body> 
-
-    <h2 id="status2">0, 0</h2>
-    <canvas width="800px" height="600px" style="width: 800px; height: 600px; border:1px ridge green;" id="special">
-
-    </canvas>
+<body onload='init()'>
+<canvas id="ex01" width='400px' height='300px'></canvas>
 
 </body>
-  
-</body>
-
-
 </html>
-

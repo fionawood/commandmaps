@@ -20,41 +20,6 @@
 
 <script type='text/javascript'>//<![CDATA[ 
 
-	function init(){
-		setInterval(draw_circle,20);
-	}
-	var radius=10;
-	var alpha = 0;
-
-
-	function draw_circle(){
-	    var canvas = document.getElementById('special');
-	    var ctx = canvas.getContext('2d');
-	    ctx.clearRect(0,0,canvas.width,canvas.height);
-	    
-	    ctx.save();
-	    
-	    ctx.translate(canvas.width/2,canvas.height/2);
-	    ctx.fillStyle = 'rgba(0,100,200,'+alpha+')';
-	    ctx.beginPath();
-	    ctx.arc(0,0,radius,0,Math.PI*2,false);
-	    ctx.fill();
-	    
-	    if(radius >= 100) {
-	        radius = 0;
-	    } else {
-	        radius+=1;
-	    }
-	    
-	    if(alpha <= 0){
-	        alpha=1;
-	    } else {
-	        alpha-=.01;
-	    }
-	    
-	    ctx.restore();
-	}
-
 $(window).load(function(){
 
 	jQuery(document).ready(function(){
@@ -68,6 +33,7 @@ $(window).load(function(){
 	        var ctx= c.getContext("2d");
 	        ctx.beginPath();
 	        ctx.arc(x, y, 5,0, 2*Math.PI);
+	        ctx.fillStyle="red";
 	        ctx.fill();
 	        ctx.strokeStyle="red";
 	        ctx.stroke();
