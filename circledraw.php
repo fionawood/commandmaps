@@ -11,15 +11,17 @@
   
   <link rel="stylesheet" type="text/css" href="/css/result-light.css">
   
-  <style type='text/css'>
-    
+  <style type='text/css' media="screen">
+  	canvas, img {display:block margin:lem auto; border:1px solid black;}
+  	canvas { background:url(http://monster.krash.net/cs279/commandmaps/gfx/commandmap.png);}
+ 
   </style>
   
-
 
 <script type='text/javascript'>//<![CDATA[ 
 $(window).load(function(){
 jQuery(document).ready(function(){
+
      $("#special").click(function(e){ 
 
         var x = e.pageX - this.offsetLeft;
@@ -42,10 +44,12 @@ jQuery(document).ready(function(){
 </head>
 <body>
   <body> 
+
     <h2 id="status2">0, 0</h2>
     <canvas width="500px" height="500px" style="width: 500px; height: 500px; border:1px ridge green;" id="special">
 
     </canvas>
+
 </body>
   
 </body>
