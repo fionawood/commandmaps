@@ -85,6 +85,7 @@ $(window).load(function(){
 
 </script>
 
+<!-- HOME -->
 <div id="home">
 <h1 class="title">Designing for You</h1>
 Help us study user interface design.
@@ -110,6 +111,7 @@ We have 2 interfaces for you to test out! Some practice first.
 
 </div>
 
+<!-- EXPERIMENT -->
 <div id="experiment" style="display:inline-block;display:none;">
 	<div class="box-instr"></br><b>Bold</b></br><img src="gfx/bold.png"></div>
 	<div class="box-pic">
@@ -117,6 +119,7 @@ We have 2 interfaces for you to test out! Some practice first.
 	</div>
 </div>
 
+<!-- QUESTIONNAIRE -->
 <div id="questionnaire" style="text-align:left;margin-left:5%;display:none;">
 <h3>Some questions:</h3>
 <b>Which interface did you prefer?</b></br></br>
@@ -142,6 +145,7 @@ We have 2 interfaces for you to test out! Some practice first.
 </form>
 </div>
 
+<!-- FINISH end page -->
 <div id="finish" style="display:none;">
 	<h2>Thank you for participating in our study! We really appreciate your help.</h2>
 	<img src="http://i46.tinypic.com/2s7j7yq.jpg"><img src="http://i46.tinypic.com/2s7j7yq.jpg">
