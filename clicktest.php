@@ -36,7 +36,7 @@
 		
 		if(radius <= 20) {
 			radius+=1;
-			alpha-=.1;
+			alpha-=.05;
 		} 
 	}
 
