@@ -31,13 +31,15 @@
     	ctx.clearRect(0,0,800,600);
         ctx.beginPath();
         ctx.arc(x, y, radius,0, 2*Math.PI);
+        ctx.lineWidth = 5;
 		ctx.strokeStyle = 'rgba(200,0,0,'+alpha+')';
         ctx.stroke();
 		
-		if(radius <= 20) {
+		if(radius <= 15) {
 			radius+=1;
-			alpha-=.05;
+			alpha-=.07;
 		} 
+
 	}
 
 $(window).load(function(){
@@ -46,7 +48,7 @@ $(window).load(function(){
 	// var alpha = 1;
 	// var x = 100;
 	// var y = 100;
-	setInterval(draw_circle,20);
+	setInterval(draw_circle,30);
 	// draw_circle();
 
 
