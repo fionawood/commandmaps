@@ -27,10 +27,11 @@ jQuery(document).ready(function(){
         var x = e.pageX - this.offsetLeft;
         var y = e.pageY - this.offsetTop; 
 
-        /* var c=document.getElementById("special"); */
-        var ctx= this.getContext("2d"); /*c.getContext("2d");*/
+        var c=document.getElementById("special"); 
+        var ctx= c.getContext("2d");
         ctx.beginPath();
         ctx.arc(x, y, 5,0, 2*Math.PI);
+        ctx.strokeStyle="red";
         ctx.stroke();
 
         $('#status2').html(x +', '+ y); 
