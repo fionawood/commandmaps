@@ -1,0 +1,34 @@
+<html>
+<head>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/click.model.js"></script>
+<script type="text/javascript" src="js/db.js"></script>
+
+<script type='text/javascript'>
+
+window.onload = function() {
+
+  // create test click
+  var test_click = new Click();
+  test_click.user_id = 0;
+  test_click.x = 10;
+  test_click.y = 20;
+  test_click.click_time = 10000000;
+  test_click.click_currmenu = 'view';
+  // send ajax to store in database
+  DB.store(test_click, function() {
+    alert('stored.');
+  });
+
+}
+
+
+
+</script>
+
+
+</head>
+
+<body></body>
+</html>
