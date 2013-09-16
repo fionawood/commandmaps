@@ -67,14 +67,11 @@ $(window).load(function(){
 
 
 <div style="display:inline-block">
-	<div class="box-instr">Icon Name | Icon</div>
+	<div class="box-instr"></br><b>Bold</b></br><img src="gfx/bold.png"></div>
 	<div class="box-pic">
 		<canvas width="800px" height="600px" style="width: 800px; height: 600px; border:1px ridge green;" id="special"></canvas>
 	</div>
 </div>
-
-...after click on a non-menuTab, beep and display next button
-
 
 <?php 
 require_once('footer.php');
