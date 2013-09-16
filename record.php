@@ -6,8 +6,9 @@
  *
  * EXAMPLE USAGE
  * 
- * http://monster.krash.net/cs279/commandmaps/record.php?type=click&data={x:10,y:10...}
+ * http://monster.krash.net/cs279/commandmaps/record.php?type=click&data=BASE64ENCODED_JSON
  *
+ * works also via POST and to update an existing object
  *
  */
 
@@ -20,7 +21,9 @@ require_once('config.inc.php');
 
 require_once('mapper.class.php');
 
+// the models
 require_once('click.model.php');
+require_once('user.model.php');
 
 // we need a type
 if (isset($_GET['type'])) {
@@ -63,16 +66,44 @@ $generic_object = json_decode($data);
 // create an object based on the type
 $real_object = new $type();
 
+// check if an id was set. if yes, this is an updating task
+if (isset($generic_object->id)) {
+
+  $real_objects = Mapper::getStatic($type, $generic_object->id);
+
+  $real_object = $real_objects[$type][0];
+
+  $id = $generic_object->id;
+
+}
+
 // loop through all properties of the JSON object
 foreach($generic_object as $key => $value) {
 
   if ($key == '_classname') continue;
+  if ($key == 'id') continue;
+  if ($key == 'ip') continue;
+  if ($key == 'browser') continue;
 
   $real_object->$key = $value;
 
 }
 
-// store the object in the database
-echo Mapper::add($real_object);
+if (isset($id)) {
+
+  // update the existing object
+  Mapper::update($real_object, $id);
+
+} else {
+
+  // store the new object in the database
+  $id = Mapper::add($real_object);
+  $real_object->id = $id;
+
+  $real_object->_classname = $type;
+
+}
+
+echo json_encode($real_object);
 
 ?>
