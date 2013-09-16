@@ -23,7 +23,7 @@
         <div class="container-fluid">
 
             <div id="middle">
-            	
+
 <script type='text/javascript' src='//code.jquery.com/jquery-1.9.1.js'></script>
 
 <link rel="stylesheet" type="text/css" href="/css/result-light.css">
@@ -101,6 +101,7 @@ Help us study user interface design.
 We have 2 interfaces for you to test out! Some practice first. 
 </br><h3>Click the next button below to begin.</h3>
 
+<!-- button FROM home TO experiment -->
 <button class="next-btn" onclick="$('#home').hide();$('#experiment').show();$('#bottom').hide();">Next</button>
 
 <div id="bottom">
