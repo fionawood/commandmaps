@@ -99,6 +99,7 @@ Q.sequence = shuffle(['Commandmap','Ribbon']);
 Q.current_sequence = Q.sequence[0];
 // start with practice mode
 Q.practice = true;
+Q.Ribbon_menu = ['Main','Insert','View'];
 
 Q.init = function(how_many, need_switch) {
 

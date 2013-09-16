@@ -88,8 +88,6 @@ window.onload = function() {
         });
       }
 
-      
-
     } else {
 
       // wrong, play sound
@@ -105,8 +103,6 @@ window.onload = function() {
       click.click_currmenu = 'view';
 
       I.clicks.push(click);
-
-
     }
 
   }); 
