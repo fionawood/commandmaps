@@ -11,6 +11,8 @@ class Click extends Object {
 
   public $y = 0;
 
+  public $correct = 0;
+
   public $click_time = -1;
 
   public $click_currmenu = '';
