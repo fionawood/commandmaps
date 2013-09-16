@@ -1,6 +1,6 @@
-COMMANDMAPS
+RIBBONS
 
-HOME 52 -> 138
+HOME 
 
 	***CLIPBOARD
 
@@ -63,7 +63,7 @@ HOME 52 -> 138
 
 	EDITING binoculars 777
 
-INSERT  162 -> 246
+INSERT  
 
 	pages 50
 	table 100
@@ -77,6 +77,12 @@ INSERT  162 -> 246
 	screenshot 230
 
 	links 372
+
+	Header & Footer 486
+	
+	Text 661
+
+	Symbols 764
 	
 
 LAYOUT 271 -> 355
