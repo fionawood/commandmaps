@@ -23,15 +23,14 @@
 	var y = -1;
 	var time = 0;
 	function draw_circle(){
-		var canvas = document.getElementById('special');
-		var ctx = canvas.getContext('2d');
-			// ctx.clearRect(0,0,canvas.width,canvas.height);
-			// ctx.save();
-			// ctx.translate(canvas.width/2,canvas.height/2);
-		ctx.fillStyle = 'red';//'rgba(0,100,200,'+alpha+')';
-		ctx.beginPath();
-		ctx.arc(x,y,100,0,Math.PI*2,false);
-		ctx.fill();
+        var c=document.getElementById("special"); 
+        var ctx= c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(x, y, 5,0, 2*Math.PI);
+        ctx.fillStyle="red";
+        ctx.fill();
+        ctx.strokeStyle="red";
+        ctx.stroke();
 		
 		// if(radius >= 100) {
 		// 	radius = 0;
@@ -64,15 +63,7 @@ $(window).load(function(){
 	        x = e.pageX - this.offsetLeft;
 	        y = e.pageY - this.offsetTop; 
 	        time = e.timeStamp;
-
-	        var c=document.getElementById("special"); 
-	        var ctx= c.getContext("2d");
-	        ctx.beginPath();
-	        ctx.arc(x, y, 5,0, 2*Math.PI);
-	        ctx.fillStyle="red";
-	        ctx.fill();
-	        ctx.strokeStyle="red";
-	        ctx.stroke();
+	        draw_circle();
 
 	        $('#status2').html('position = ' + x +', '+ y + " @ " + time); 
 	   }); 
@@ -86,7 +77,7 @@ $(window).load(function(){
 <body>
   <body> 
 
-    <h2 id="status2">position = 0, 0</h2>
+    <h2 id="status2">click position = 0, 0</h2>
     <canvas width="800px" height="600px" style="width: 800px; height: 600px; border:1px ridge green;" id="special">
 
     </canvas>
