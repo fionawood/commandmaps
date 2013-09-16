@@ -2,7 +2,8 @@ TODO
 
 -overlay next button
 -block clicking until transfer complete
--repeated icons
+FIXED -repeated icons
 -practice mode, regular mode
 -ribbons, tabs
 -analyze loading time
+FIXED -storing icon and correctness
