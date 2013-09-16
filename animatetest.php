@@ -58,9 +58,22 @@ canvas {
 		}
 		ctx.restore();
 	}
+
+
+	$(window).load(function(){
+
+		jQuery(document).ready(function(){
+
+		    $("#special").click(function(e){ 
+	        	$('#status2').html(x +', '+ y); 
+	   		}); 
+		})  
+	});//]]>  
 </script>
 </head>
 <body onload='init()'>
+
+<h2 id="status2">0, 0</h2>
 <canvas id="ex01" width='400px' height='300px'></canvas>
 
 </body>
