@@ -93,3 +93,23 @@
     font-family: Times;
     padding: 10px;
 }
+
+/* instructions box */
+.box-instr
+{ 
+    border: 5px solid #088; 
+    width: 200px;
+    height: 600px;
+    font-size: 3em;
+    float: left;
+}
+
+/* interface pic box */
+.box-pic
+{ 
+    border: 5px solid #088; 
+    width: 800px;
+    height: 600px;
+    font-size: 3em;
+    float: right;
+}
