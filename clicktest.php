@@ -23,14 +23,14 @@
 	var y = -1;
 	var time = 0;
 	var radius = 10;
-	// var alpha = 1;
+	var alpha = 1;
 
 	function draw_circle(){
         var c=document.getElementById("special"); 
         var ctx= c.getContext("2d");
         ctx.beginPath();
         ctx.arc(x, y, radius,0, 2*Math.PI);
-        ctx.fillStyle="red";
+		ctx.fillStyle = 'rgba(0,100,200,'+alpha+')';
         ctx.fill();
 		
 		if(radius >= 20) {
@@ -39,11 +39,11 @@
 			radius+=1;
 		}
 		
-		// if(alpha <= 0){
-		// 	alpha=1;
-		// } else {
-		// 	alpha-=.01;
-		// }
+		if(alpha <= 0){
+			alpha=1;
+		} else {
+			alpha-=.01;
+		}
 	}
 
 $(window).load(function(){
