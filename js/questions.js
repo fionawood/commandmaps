@@ -219,7 +219,6 @@ Q.init_question = function() {
     Q.next_section();
 
     return;
-
   }
 
   Q.current = Q.icons[Q.current_index];
