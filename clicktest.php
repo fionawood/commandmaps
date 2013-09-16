@@ -29,11 +29,9 @@
         var c=document.getElementById("special"); 
         var ctx= c.getContext("2d");
         ctx.beginPath();
-        ctx.arc(x, y, 5,0, 2*Math.PI);
-        ctx.fillStyle="red";
+        ctx.arc(x, y, radius,0, 2*Math.PI);
+        ctx.fillStyle="blue";
         ctx.fill();
-        ctx.strokeStyle="red";
-        ctx.stroke();
 		
 		if(radius >= 100) {
 			radius = 0;
