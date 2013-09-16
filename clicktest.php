@@ -52,7 +52,7 @@ $(window).load(function(){
 	// var x = 100;
 	// var y = 100;
 	//setInterval(draw_circle,20);
-	draw_circle();
+	// draw_circle();
 
 
 	jQuery(document).ready(function(){
@@ -62,6 +62,7 @@ $(window).load(function(){
 	        var x = e.pageX - this.offsetLeft;
 	        var y = e.pageY - this.offsetTop; 
 	        var t = e.timeStamp;
+	        draw_circle();
 
 	        $('#status2').html('position = ' + x +', '+ y + " @ " + t); 
 	   }); 
