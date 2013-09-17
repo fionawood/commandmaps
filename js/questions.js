@@ -251,7 +251,7 @@ Q.validate = function(x,y,menu) {
 Q.validate_menu = function(x,y) {
 
   var catalog = Q.Ribbon_menu_catalog;
-  if((y > catalog[Q.menus[0]]['y2']) || (y < catalog['main']['y1'])) return 'main'; //user did not click a menu option
+  if((y > catalog[Q.menus[0]]['y2']) || (y < catalog[Q.menus[0]]['y1'])) return 'file'; //user did not click a menu option
 
   for(var i=0; i<catalog.length; i++) {
     if(x<catalog[Q.menus[i]]['x1'])
