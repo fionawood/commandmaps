@@ -103,6 +103,10 @@ window.onload = function() {
     } else {
 
       // wrong, play sound
+      var foo=new Sound("beep.mp3",100,false);
+      foo.start();
+
+
 
       // store click
       var click = new Click();
