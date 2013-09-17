@@ -154,6 +154,8 @@ Q.Ribbon_menu_catalog = {
   }
 } 
 
+Q.menus = Object.keys(Q.Ribbon_menu_catalog);
+
 // randomize the sets
 Q.sequence = shuffle(['Commandmap','Ribbon']);
 Q.current_sequence = Q.sequence[0];
@@ -249,11 +251,11 @@ Q.validate = function(x,y,menu) {
 Q.validate_menu = function(x,y) {
 
   var catalog = Q.Ribbon_menu_catalog;
-  if((y > catalog[0]['y2']) || (y < catalog[0]['y1'])) return 'main'; //user did not click a menu option
+  if((y > catalog[Q.menus[0]]['y2']) || (y < catalog['main']['y1'])) return 'main'; //user did not click a menu option
 
   for(var i=0; i<catalog.length; i++) {
-    if(x<catalog[i]['x1'])
-      return catalog[i]['tab'];
+    if(x<catalog[Q.menus[i]]['x1'])
+      return catalog[Q.menus[i]]['tab'];
   }
 };
 
@@ -323,7 +325,7 @@ Q.init_question = function() {
 
   // update div
   $('#label').html(Q.current);
-  $('#icon')[0].src = 'gfx/'+Q.current;
+  $('#icon')[0].src = 'gfx/'+Q.current+'.png';
   
   if(Q.current_sequence=='Ribbon')
     $('canvas').css({'background':"url(gfx/ribbon_main.png)"});
