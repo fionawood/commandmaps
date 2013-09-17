@@ -56,6 +56,8 @@ window.onload = function() {
     if(Q.current_sequence=='Ribbon')  {
       menu = Q.validate_menu(x,y,menu);
       $('canvas').css({'background':"url(gfx/ribbon_"+menu+".png)"});
+    } else {
+      menu = 'commandmap';
     }
 
     //$('#status2').html('position = ' + x +', '+ y + " @ " + time); 
