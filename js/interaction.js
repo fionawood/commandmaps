@@ -54,7 +54,7 @@ window.onload = function() {
     draw_circle();
 
     if(Q.current_sequence=='Ribbon')  {
-      menu = Q.validate_menu(x,y);
+      menu = Q.validate_menu(x,y,menu);
       $('canvas').css({'background':"url(gfx/ribbon_"+menu+".png)"});
     }
 

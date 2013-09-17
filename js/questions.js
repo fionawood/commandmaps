@@ -248,15 +248,17 @@ Q.validate = function(x,y,menu) {
 
 };
 
-Q.validate_menu = function(x,y) {
+Q.validate_menu = function(x,y,menu) {
 
   var catalog = Q.Ribbon_menu_catalog;
-  if((y > catalog[Q.menus[0]]['y2']) || (y < catalog[Q.menus[0]]['y1'])) return 'file'; //user did not click a menu option
+  var catalog_length = Object.keys(catalog).length;
+  if((y > catalog[Q.menus[0]]['y2']) || (y < catalog[Q.menus[0]]['y1'])) return menu; //user did not click a menu option
 
-  for(var i=0; i<catalog.length; i++) {
-    if(x<catalog[Q.menus[i]]['x1'])
+  for(var i=0; i<catalog_length; i++) {
+    if(x<catalog[Q.menus[i]]['x2'])
       return catalog[Q.menus[i]]['tab'];
   }
+  return menu;
 };
 
 Q.setup = function() {
