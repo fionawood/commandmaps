@@ -1,6 +1,6 @@
 var I = {};
 
-var menu='main';
+var menu='home';
 
 var x = -100;
   var y = -100;
@@ -72,7 +72,7 @@ window.onload = function() {
       click.icon = Q.current;
       click.correct = 1;
       click.click_time = delta;
-      click.click_currmenu = 'view';
+      click.click_currmenu = menu;
 
       I.clicks.push(click);
 
@@ -89,6 +89,8 @@ window.onload = function() {
 
             //console.log('all stored');
             
+            menu = 'home';
+
             $('#next').show();
 
           }
@@ -108,7 +110,7 @@ window.onload = function() {
       click.correct = 0;
       click.icon = Q.current;
       click.click_time = delta;
-      click.click_currmenu = 'view';
+      click.click_currmenu = menu;
 
       I.clicks.push(click);
     }
