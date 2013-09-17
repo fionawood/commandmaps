@@ -93,7 +93,6 @@ window.onload = function() {
 
             //console.log('all stored');
             
-            menu = 'home';
 
             $('#next').show();
 
