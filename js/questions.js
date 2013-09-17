@@ -330,7 +330,7 @@ Q.init_question = function() {
   $('#icon')[0].src = 'gfx/'+Q.current+'.png';
   
   if(Q.current_sequence=='Ribbon')
-    $('canvas').css({'background':"url(gfx/ribbon_main.png)"});
+    $('canvas').css({'background':"url(gfx/ribbon_home.png)"});
   else
     $('canvas').css({'background':"url(gfx/commandmap.png)"});
 

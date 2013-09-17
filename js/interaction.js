@@ -53,6 +53,8 @@ window.onload = function() {
     alpha=1;
     draw_circle();
 
+    var old_menu = menu;
+
     if(Q.current_sequence=='Ribbon')  {
       menu = Q.validate_menu(x,y,menu);
       $('canvas').css({'background':"url(gfx/ribbon_"+menu+".png)"});
@@ -102,9 +104,13 @@ window.onload = function() {
 
     } else {
 
+
       // wrong, play sound
-      var foo=new Sound("beep.mp3",100,false);
-      foo.start();
+      if (menu == old_menu) {
+        var foo=new Sound("beep.mp3",100,false);
+        foo.start();
+        console.log('play sound');
+      }
 
 
 
