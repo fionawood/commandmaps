@@ -136,7 +136,7 @@ Q.Ribbon_menu_catalog = {
     'y1':30,
     'x2':430,
     'y2':52,
-    'tab':'view'
+    'tab':'mailings'
   },
   'review':{
     'x1':430,
