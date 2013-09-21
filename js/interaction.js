@@ -43,10 +43,10 @@ window.onload = function() {
     preferFlash: false,
     onready: function() {
       I.scream = soundManager.createSound({
-        url: 'audio/scream1.wav'
+        url: 'audio/scream1.mp3'
       });
       I.beep = soundManager.createSound({
-        url: 'beep.mp3'
+        url: 'audio/beep.mp3'
       })
     }
   });
@@ -141,9 +141,7 @@ window.onload = function() {
 
       // wrong, play sound
       if (menu == old_menu) {
-        var foo=new Sound("beep.mp3",100,false);
-        foo.start();
-        console.log('play sound');
+        beep();
       } else {
 
         // this is a menu switch
