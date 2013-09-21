@@ -2,8 +2,8 @@ var I = {};
 
 var menu='home';
 
-I.menuclicks = 0;
-I.clicks = 0;
+I.menuclicknum = 0;
+I.clicknum = 0;
 
 var x = -100;
   var y = -100;
@@ -47,7 +47,8 @@ window.onload = function() {
       I.interval = setInterval(draw_circle,30);
     }
 
-
+    //
+    I.clicknum++;
 
     x = e.pageX - this.offsetLeft;
     y = e.pageY - this.offsetTop; 
@@ -78,6 +79,8 @@ window.onload = function() {
       click.y = y;
       click.icon = Q.current;
       click.correct = 1;
+      click.clicknum = I.clicknum;
+      click.menuclicknum = I.menuclicknum;
       if (!Q.practice) {
         click.trialnum = Q.trialnum;
       } else {
@@ -92,6 +95,9 @@ window.onload = function() {
 
       // reset the menu
       menu = 'home';
+      // and the counters
+      I.menuclicknum = 0;
+      I.clicknum = 0;
 
       I.clicks.push(click);
 
@@ -124,6 +130,11 @@ window.onload = function() {
         var foo=new Sound("beep.mp3",100,false);
         foo.start();
         console.log('play sound');
+      } else {
+
+        // this is a menu switch
+        I.menuclicknum++;
+
       }
 
 
@@ -140,6 +151,7 @@ window.onload = function() {
         click.trialnum = -1;
       }
       click.icon = Q.current;
+      click.clicknum = I.clicknum;
       click.click_time = delta;
       if (Q.current_sequence == 'Ribbon'){
         click.click_currmenu = menu;
