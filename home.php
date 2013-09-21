@@ -46,13 +46,13 @@
 </br>
 <h3>Find out now, and see if you're faster than most people!</h3>
 </br>
-<h4>This is a study by Harvard University students Daniel, Fiona, and Sharon!</h4>
 <!-- button from HOME to INSTRUCTIONS -->
 <button class="next-btn" onclick="$('#home').hide();$('#consent').show();">Enter the Challenge</button>
+</br></br>
 <img src="http://i1123.photobucket.com/albums/l543/hercampusphoto/HCIllinois/Illinois%203/MusicalNotesHead.jpg">
 </br>
 <div id="bottom">
-    CS 279 |  <a>Daniel, Fiona, and Sharon</a>
+   This is a study by Harvard University students Daniel, Fiona, and Sharon :)</a>
 </div>
 </div>
 
@@ -61,7 +61,7 @@
 <div style="text-align:left;margin-left:15%">
 <div style="text-decoration:underline">Statement of Informed Consent</div>
 <ul>You're about to participate in a research study. Your contribution to our research allows us to learn more about how reaction time increases as a result of an auditory stimulus—here, "concentration music."</ul>
-<ul><i>Please read the following information carefully before proceeding.<i></ul>
+<ul><i>Please read the following information carefully before proceeding.</i></ul>
 <ul><h4>Why we are doing this research</h4></ul>
 <ul>We are trying to understand how auditory stimuli affect people's reaction time. We are also trying to understand how command selection time and error rates vary between interfaces with menus and those without. </ul>
 <ul><h4>What you will have to do</h4></ul>
@@ -84,7 +84,7 @@
 </div>
 
 <!-- INSTRUCTIONS -->
-<div id="instructions">
+<div id="instructions" style="display:none;">
 <div style="text-align:left;margin-left:15%">
 <div style="text-decoration:underline">Instructions</div>
 <ul>This test will investigate how your speed in a concentration task is affected by an auditory stimulus—here, "concentration music." You will be shown an icon and its name on the left. Your concentration task is to find that icon in the Microsoft Word menu shown and click on it as fast as possible. There are 2 rounds of menus.</ul>
