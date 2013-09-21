@@ -2,6 +2,9 @@ var I = {};
 
 var menu='home';
 
+I.menuclicks = 0;
+I.clicks = 0;
+
 var x = -100;
   var y = -100;
   var time = 0;
@@ -75,8 +78,13 @@ window.onload = function() {
       click.y = y;
       click.icon = Q.current;
       click.correct = 1;
+      click.trialnum = Q.trialnum;
       click.click_time = delta;
-      click.click_currmenu = menu;
+      if (Q.current_sequence == 'Ribbon'){
+        click.click_currmenu = menu;
+      } else {
+        click.click_currmenu = 'commandmap';
+      } 
 
       I.clicks.push(click);
 
@@ -119,9 +127,14 @@ window.onload = function() {
       click.x = x;
       click.y = y;
       click.correct = 0;
+      click.trialnum = Q.trialnum;
       click.icon = Q.current;
       click.click_time = delta;
-      click.click_currmenu = menu;
+      if (Q.current_sequence == 'Ribbon'){
+        click.click_currmenu = menu;
+      } else {
+        click.click_currmenu = 'commandmap';
+      } 
 
       I.clicks.push(click);
     }
