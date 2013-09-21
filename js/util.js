@@ -50,3 +50,7 @@ function Sound(source,volume,loop)
         this.loop=loop;
     }
 }
+
+function scream() {
+  I.scream.play();
+}

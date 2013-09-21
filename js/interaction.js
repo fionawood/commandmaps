@@ -37,6 +37,17 @@ window.onload = function() {
   I.clicks = [];
   I.stored = [];
 
+  // setup the soundmanager
+  soundManager.setup({
+    url: 'swf/',
+    preferFlash: false,
+    onready: function() {
+      I.scream = soundManager.createSound({
+        url: 'audio/scream1.wav'
+      });
+    }
+  });
+
 
   $("#special").on('click', function(e){ 
     

@@ -18,6 +18,7 @@
         <script src='js/click.model.js'></script>
         <script src='js/user.model.js'></script>
         <script src='js/db.js'></script>
+        <script src='js/soundmanager2-nodebug-jsmin.js'></script>
 
 
     </head>
