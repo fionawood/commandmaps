@@ -53,4 +53,13 @@ function Sound(source,volume,loop)
 
 function scream() {
   I.scream.play();
+
+  console.log('screaming now');
+
+}
+
+function beep() {
+    I.beep.play();
+
+    console.log('beeping now');
 }

@@ -45,6 +45,9 @@ window.onload = function() {
       I.scream = soundManager.createSound({
         url: 'audio/scream1.wav'
       });
+      I.beep = soundManager.createSound({
+        url: 'beep.mp3'
+      })
     }
   });
 
