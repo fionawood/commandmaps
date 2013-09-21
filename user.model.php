@@ -5,8 +5,6 @@ require_once 'object.model.php';
 
 class User extends Object {
 
-  public $ip = '';//$_SERVER['REMOTE_ADDR'];
-
   public $browser = '';//$_SERVER['HTTP_USER_AGENT'];
 
   public $load_time = '';
@@ -22,7 +20,6 @@ class User extends Object {
   public function __construct() {
 
     // we need to assign these values in the contructor
-    $this->ip = $_SERVER['REMOTE_ADDR'];
     $this->browser = $_SERVER['HTTP_USER_AGENT'];
   }
 

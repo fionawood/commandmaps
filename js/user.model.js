@@ -2,8 +2,6 @@ User = function() {
   
   this._classname = 'user';
 
-  this.ip = '';
-
   this.browser = '';
 
   this.load_time = '';
