@@ -153,6 +153,7 @@ window.onload = function() {
       click.icon = Q.current;
       click.clicknum = I.clicknum;
       click.click_time = delta;
+      click.menuclicknum = I.menuclicknum;
       if (Q.current_sequence == 'Ribbon'){
         click.click_currmenu = menu;
       } else {
