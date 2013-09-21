@@ -12,6 +12,8 @@ User = function() {
 
   this.comments = '';
 
+  this.sequence = '';
+
   this.state = -1;
 
 }

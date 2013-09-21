@@ -292,8 +292,10 @@ Q.init_experiment = function() {
   // create the user
   Q.user = new User();
   Q.user.load_time = 100;
+  Q.user.sequence = Q.sequence.toString();
   DB.store(Q.user, function(user) {
     console.log('stored user');
+
     Q.user = JSON.parse(user);
 
     $('#home').hide();

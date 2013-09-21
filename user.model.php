@@ -15,6 +15,8 @@ class User extends Object {
 
   public $comments = '';
 
+  public $sequence = '';
+
   public $state = -1;
 
   public function __construct() {
