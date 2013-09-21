@@ -11,6 +11,12 @@ class Click extends Object {
 
   public $y = 0;
 
+  public $trialnum = 0;
+
+  public $clicknum = 0;
+
+  public $menuclicknum = 0;
+
   public $icon = '';
 
   public $correct = 0;

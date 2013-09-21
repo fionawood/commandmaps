@@ -8,6 +8,12 @@ Click = function() {
 
   this.y = 0;
 
+  this.trialnum = 0;
+
+  this.clicknum = 0;
+
+  this.menuclicknum = 0;
+
   this.icon = '';
 
   this.correct = false;

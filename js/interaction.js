@@ -78,13 +78,20 @@ window.onload = function() {
       click.y = y;
       click.icon = Q.current;
       click.correct = 1;
-      click.trialnum = Q.trialnum;
+      if (!Q.practice) {
+        click.trialnum = Q.trialnum;
+      } else {
+        click.trialnum = -1;
+      }
       click.click_time = delta;
       if (Q.current_sequence == 'Ribbon'){
         click.click_currmenu = menu;
       } else {
         click.click_currmenu = 'commandmap';
       } 
+
+      // reset the menu
+      menu = 'home';
 
       I.clicks.push(click);
 
@@ -127,7 +134,11 @@ window.onload = function() {
       click.x = x;
       click.y = y;
       click.correct = 0;
-      click.trialnum = Q.trialnum;
+      if (!Q.practice) {
+        click.trialnum = Q.trialnum;
+      } else {
+        click.trialnum = -1;
+      }
       click.icon = Q.current;
       click.click_time = delta;
       if (Q.current_sequence == 'Ribbon'){

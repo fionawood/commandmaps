@@ -162,6 +162,8 @@ Q.current_sequence = Q.sequence[0];
 // start with practice mode
 Q.practice = true;
 
+Q.trialnum = 0;
+
 Q.NUMBER_OF_PRACTICE = 1;
 Q.NUMBER_OF_REAL = 2;
 
@@ -324,6 +326,18 @@ Q.init_question = function() {
 
     return;
   }
+
+
+
+
+  // increase the trialnumber but only if we are not in practice mode
+  if(!Q.practice) {
+
+    Q.trialnum++;
+    console.log('Trial number', Q.trialnum);
+    
+  }
+
 
   Q.current = Q.icons[Q.current_index];
 
