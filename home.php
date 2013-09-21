@@ -41,28 +41,62 @@
 
 <!-- HOME -->
 <div id="home">
-<h1 class="title">Designing for You</h1>
-Help us study user interface design.
-</br></br>
-
-<div style="text-align:left;margin-left:15%">
-<div style="text-decoration:underline">Instructions:</div>
-<ul>You will see an inset screen of something resembling Microsoft Word 2007.</ul>
-<ul>We will give you an icon as your target.</ul>
-<ul>Find and click on that target in the inset screen.</ul>
-<ul>Then click the <button class="next-btn">Next</button> button for the next icon, your new target.</ul>
-</div>
-
-We have 2 interfaces for you to test out! Some practice first. 
-</br><h3>Click the next button below to begin.</h3>
-
-<!-- button FROM home TO experiment -->
-<button class="next-btn" onclick="Q.init_experiment();">Next</button>
+<h1 class="title">What's your Reaction Time?</h1>
+<h3>How fast can you click with the aid of concentration music?</h3>
+</br>
+<h3>Find out now, and see if you're faster than most people!</h3>
+</br>
+<h4>This is a study by Harvard University students Daniel, Fiona, and Sharon!</h4>
+<!-- button from HOME to INSTRUCTIONS -->
+<button class="next-btn" onclick="$('#home').hide();$('#consent').show();">Enter the Challenge</button>
+<img src="http://i1123.photobucket.com/albums/l543/hercampusphoto/HCIllinois/Illinois%203/MusicalNotesHead.jpg">
 </br>
 <div id="bottom">
     CS 279 |  <a>Daniel, Fiona, and Sharon</a>
 </div>
+</div>
 
+<!-- CONSENT FORM -->
+<div id="consent" style="display:none">
+<div style="text-align:left;margin-left:15%">
+<div style="text-decoration:underline">Statement of Informed Consent</div>
+<ul>You're about to participate in a research study. Your contribution to our research allows us to learn more about how reaction time increases as a result of an auditory stimulus—here, "concentration music."</ul>
+<ul><i>Please read the following information carefully before proceeding.<i></ul>
+<ul><h4>Why we are doing this research</h4></ul>
+<ul>We are trying to understand how auditory stimuli affect people's reaction time. We are also trying to understand how command selection time and error rates vary between interfaces with menus and those without. </ul>
+<ul><h4>What you will have to do</h4></ul>
+<ul>You will be shown an icon and two interfaces: one that employs Microsoft Ribbons, the other that employs a flat hierarchical structure without menus. You will be asked to find and click on the appropriate icon on each interface as quickly as possible. You will have the opportunity to practice on 10 icon targets with each interface before the evaluation, in which 30 icon targets will be shown for each interface. We will also ask you a few basic questions about your preference between interfaces and your computer use. </ul>
+<ul><h4>Potential risks</h4></ul>
+<ul>There are no risks anticipated in taking part in this study and you are free to leave at any time. </ul>
+<ul><h4>Duration</h4></ul>
+<ul>Approximately 10 minutes.</ul>
+<ul><h4>To contact the researcher</h4></ul>
+<ul>If you have questions or concerns about this research, please contact prof. Krzysztof Gajos, Maxwell Dworkin 251, 33 Oxford St, Cambridge, MA 02138, kgajos@seas.harvard.edu</ul>
+<ul>Whom to contact about your rights in this research, for questions, concerns, suggestions, or complaints that are not being addressed by the researcher, or research-related harm: Committee on the Use of Human Subjects in Research at Harvard University, 1414 Massachusetts Avenue, Second Floor, Cambridge, MA 02138. Phone: 617-496-2847 (CUHS). Email: cuhs@fas.harvard.edu.</ul>
+<ul>By clicking the button below you confirm that you have read and understood the above and agree to take part in this research. Your participation is voluntary and you are free to leave the experiment at any time by simply closing the web browser.</ul>
+</div>
+<!-- button from CONSENT FORM to INSTRUCTIONS -->
+<button class="next-btn" onclick="$('#consent').hide();$('#instructions').show();">I agree</button>
+</br>
+<div id="bottom">
+    CS 279 |  <a>Daniel, Fiona, and Sharon</a>
+</div>
+</div>
+
+<!-- INSTRUCTIONS -->
+<div id="instructions">
+<div style="text-align:left;margin-left:15%">
+<div style="text-decoration:underline">Instructions</div>
+<ul>This test will investigate how your speed in a concentration task is affected by an auditory stimulus—here, "concentration music." You will be shown an icon and its name on the left. Your concentration task is to find that icon in the Microsoft Word menu shown and click on it as fast as possible. There are 2 rounds of menus.</ul>
+<ul>There are 10 practice icons for each round to help you warm up!</ul>
+<ul>Go as fast as you can while maintaining accuracy. Your score will be shown at the end, along with how you compared to others.</ul>
+</div>
+<!-- button from INSTRUCTIONS to EXPERIMENT -->
+<button class="next-btn" onclick="$('#instructions').hide();$('#experiment').show();">Next</button>
+</br>
+<div id="bottom">
+    CS 279 |  <a>Daniel, Fiona, and Sharon</a>
+</div>
 </div>
 
 <!-- EXPERIMENT -->
