@@ -59,7 +59,7 @@ window.onload = function() {
       menu = Q.validate_menu(x,y,menu);
       $('canvas').css({'background':"url(gfx/ribbon_"+menu+".png)"});
     } else {
-      menu = 'file';
+      menu = 'home';
     }
 
     //$('#status2').html('position = ' + x +', '+ y + " @ " + time); 
