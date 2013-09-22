@@ -42,25 +42,23 @@
 <!-- HOME -->
 <div id="home">
 <h1 class="title">What's your Reaction Time?</h1>
-<h3>How fast can you click with the aid of concentration music?</h3>
-</br>
-<h3>Find out now, and see if you're faster than most people!</h3>
-</br>
+<div style="font-size:20px;">How fast can you click with the aid of <b>concentration</b> music?</div>
 <!-- button from HOME to INSTRUCTIONS -->
-<button class="next-btn" onclick="$('#home').hide();$('#consent').show();">Enter the Challenge</button>
-</br></br>
-<img src="http://i1123.photobucket.com/albums/l543/hercampusphoto/HCIllinois/Illinois%203/MusicalNotesHead.jpg">
 </br>
+<img class="brainimg" src="http://i1123.photobucket.com/albums/l543/hercampusphoto/HCIllinois/Illinois%203/MusicalNotesHead.jpg">
+</br></br>
+<button class="next-btn" onclick="$('#home').hide();$('#consent').show();">Enter the Challenge</button>
 <div id="bottom">
-   This is a study by Harvard University students Daniel, Fiona, and Sharon :)</a>
+   <a>This is a study by Harvard University students Daniel Haehn, Fiona Wood, and Sharon Zhou</a>
 </div>
 </div>
 
 <!-- CONSENT FORM -->
 <div id="consent" style="display:none">
-<div style="text-align:left;margin-left:15%">
-<div style="text-decoration:underline">Statement of Informed Consent</div>
-<ul>You're about to participate in a research study. Your contribution to our research allows us to learn more about how reaction time increases as a result of an auditory stimulus—here, "concentration music."</ul>
+<div style="margin-left:25%;margin-right:25%;">
+<h1 class="title">Statement of Informed Consent</h1>
+<div class="content" style="text-align:left;">
+<ul>You're about to participate in a research study. Your contribution to our research allows us to learn more about how <b>reaction time increases</b> as a result of an auditory stimulus: "concentration music."</ul>
 <ul><i>Please read the following information carefully before proceeding.</i></ul>
 <ul><h4>Why we are doing this research</h4></ul>
 <ul>We are trying to understand how auditory stimuli affect people's reaction time. We are also trying to understand how command selection time and error rates vary between interfaces with menus and those without. </ul>
@@ -75,28 +73,31 @@
 <ul>Whom to contact about your rights in this research, for questions, concerns, suggestions, or complaints that are not being addressed by the researcher, or research-related harm: Committee on the Use of Human Subjects in Research at Harvard University, 1414 Massachusetts Avenue, Second Floor, Cambridge, MA 02138. Phone: 617-496-2847 (CUHS). Email: cuhs@fas.harvard.edu.</ul>
 <ul>By clicking the button below you confirm that you have read and understood the above and agree to take part in this research. Your participation is voluntary and you are free to leave the experiment at any time by simply closing the web browser.</ul>
 </div>
+</div>
 <!-- button from CONSENT FORM to INSTRUCTIONS -->
 <button class="next-btn" onclick="$('#consent').hide();$('#instructions').show();">I agree</button>
 </br>
 <div id="bottom">
-    CS 279 |  <a>Daniel, Fiona, and Sharon</a>
+   <a>This is a study by Harvard University students Daniel Haehn, Fiona Wood, and Sharon Zhou</a>
 </div>
 </div>
 
 <!-- INSTRUCTIONS -->
 <div id="instructions" style="display:none;">
-<div style="text-align:left;margin-left:15%">
-<div style="text-decoration:underline">Instructions</div>
-<ul>This test will investigate how your speed in a concentration task is affected by an auditory stimulus - here, "concentration music." You will be shown an icon and its name on the left. Your concentration task is to find that icon in the Microsoft Word menu shown and click on it as fast as possible. There are 2 rounds of menus.</ul>
+<div style="margin-left:25%;margin-right:25%;">
+<h1 class="title">Instructions</h1>
+<div class="content" style="text-align:left;">
+<ul>This test will investigate how your speed in a concentration task is affected by an auditory stimulus: "concentration music." You will be shown an icon and its name on the left. Your concentration task is to <b>find that icon</b> in the Microsoft Word menu shown and click on it <b>as fast as possible</b>. There are two rounds of menus.</ul>
 <ul>There are 10 practice icons for each round to help you warm up!</ul>
 <ul>Go as fast as you can while maintaining accuracy. Your score will be shown at the end, along with how you compared to others.</ul>
 </div>
-<!-- button from INSTRUCTIONS to EXPERIMENT -->
-<button class="next-btn" onclick="Q.init_experiment();">Next</button>
-</br>
-<div id="bottom">
-    CS 279 |  <a>Daniel, Fiona, and Sharon</a>
 </div>
+<!-- button from INSTRUCTIONS to EXPERIMENT -->
+<button class="next-btn" onclick="Q.init_experiment();">Start</button>
+</br>
+</div>
+<div id="bottom" style="display:none;">
+   <a>This is a study by Harvard University students Daniel Haehn, Fiona Wood, and Sharon Zhou</a>
 </div>
 
 <!-- EXPERIMENT -->

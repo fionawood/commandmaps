@@ -56,18 +56,18 @@ small {
     
     background-color:#599bb3;
     
-    -moz-border-radius:8px;
-    -webkit-border-radius:8px;
-    border-radius:8px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
     
     display:inline-block;
     color:#ffffff;
-    font-family:arial;
     font-size:18px;
     font-weight:bold;
     padding:13px 32px;
     text-decoration:none;
-    
+
+    border: none;
 }
 .next-btn:hover {
     
@@ -121,7 +121,7 @@ small {
 
 .title
 {
-    color: #296A6B;
+    color: #408c99;
 }
 
 /* centers next experiment question */
@@ -143,4 +143,14 @@ small {
     top: 0;
     background: rgba(51,51,51,0.7);
     z-index: 10;
+}
+
+.brainimg
+{
+    height:350px;
+
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
+    border-radius:20px;
+    
 }
