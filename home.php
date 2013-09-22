@@ -90,6 +90,8 @@
 <ul>This test will investigate how your speed in a concentration task is affected by an auditory stimulus: "concentration music." You will be shown an icon and its name on the left. Your concentration task is to <b>find that icon</b> in the Microsoft Word menu shown and click on it <b>as fast as possible</b>. There are two rounds of menus.</ul>
 <ul>There are 10 practice icons for each round to help you warm up!</ul>
 <ul>Go as fast as you can while maintaining accuracy. Your score will be shown at the end, along with how you compared to others.</ul>
+<ul>Be sure to turn up your sound! It is important that you hear the concentration music while completing the tasks.</ul>
+
 </div>
 </div>
 <!-- button from INSTRUCTIONS to EXPERIMENT -->
