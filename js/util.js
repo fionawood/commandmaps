@@ -63,3 +63,22 @@ function beep() {
 
     console.log('beeping now');
 }
+
+function blink(time, interval){
+    var timer = window.setInterval(function(){
+        $("#guy").css("opacity", "0.1");
+        window.setTimeout(function(){
+            $("#guy").css("opacity", "1");
+        }, 100);
+    }, interval);
+    window.setTimeout(function(){clearInterval(timer);}, time);
+}
+
+function loopMusic() {
+  console.log('starting music');
+  I.music.play({
+    onfinish: function() {
+      loopMusic();
+    }
+  });
+}

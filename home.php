@@ -112,14 +112,19 @@
 </div>
 </div>
 
+<!--SCARY GUY-->
+<div id='scaryguy' style='display:none'>
+<img id='guy' src='gfx/scaryguy.jpg'>
+</div>
+
 <!-- QUESTIONNAIRE -->
 <div id="questionnaire" style="text-align:left;margin-left:5%;display:none;">
 <h3>Some questions:</h3>
 <b>Which interface did you prefer?</b></br></br>
 <form id='interface_form'>
 &nbsp;&nbsp;&nbsp;
-<input type="radio" name="preference" value="ribbons">Ribbons &nbsp;&nbsp;&nbsp;
-<input type="radio" name="preference" value="commandmaps">Commandmaps
+<input type="radio" name="preference" value="ribbons"><img src='gfx/ribbon_home.png' width=200> &nbsp;&nbsp;&nbsp;
+<input type="radio" name="preference" value="commandmaps"><img src='gfx/commandmap.png' width=200>
 </form>
 </br></br>
 <b>What device are you using on your computer?</b></br></br>

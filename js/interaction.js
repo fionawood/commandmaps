@@ -47,7 +47,10 @@ window.onload = function() {
       });
       I.beep = soundManager.createSound({
         url: 'audio/beep.mp3'
-      })
+      });
+      I.music = soundManager.createSound({
+        url: 'audio/music.mp3'
+      });
     }
   });
 
