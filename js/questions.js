@@ -291,6 +291,8 @@ Q.setup = function() {
 
 Q.init_experiment = function() {
 
+  console.log('Starting');
+
   // create the user
   Q.user = new User();
   Q.user.load_time = 100;
@@ -300,7 +302,7 @@ Q.init_experiment = function() {
 
     Q.user = JSON.parse(user);
 
-    $('#home').hide();
+    $('#instructions').hide();
     $('#experiment').show();
     $('#bottom').hide();
 

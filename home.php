@@ -87,12 +87,12 @@
 <div id="instructions" style="display:none;">
 <div style="text-align:left;margin-left:15%">
 <div style="text-decoration:underline">Instructions</div>
-<ul>This test will investigate how your speed in a concentration task is affected by an auditory stimulus—here, "concentration music." You will be shown an icon and its name on the left. Your concentration task is to find that icon in the Microsoft Word menu shown and click on it as fast as possible. There are 2 rounds of menus.</ul>
+<ul>This test will investigate how your speed in a concentration task is affected by an auditory stimulus - here, "concentration music." You will be shown an icon and its name on the left. Your concentration task is to find that icon in the Microsoft Word menu shown and click on it as fast as possible. There are 2 rounds of menus.</ul>
 <ul>There are 10 practice icons for each round to help you warm up!</ul>
 <ul>Go as fast as you can while maintaining accuracy. Your score will be shown at the end, along with how you compared to others.</ul>
 </div>
 <!-- button from INSTRUCTIONS to EXPERIMENT -->
-<button class="next-btn" onclick="$('#instructions').hide();$('#experiment').show();">Next</button>
+<button class="next-btn" onclick="Q.init_experiment();">Next</button>
 </br>
 <div id="bottom">
     CS 279 |  <a>Daniel, Fiona, and Sharon</a>
