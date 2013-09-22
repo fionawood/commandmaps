@@ -75,6 +75,7 @@ function blink(time, interval){
 }
 
 function loopMusic() {
+  console.log('starting music');
   I.music.play({
     onfinish: function() {
       loopMusic();
