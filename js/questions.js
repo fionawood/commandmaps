@@ -164,8 +164,8 @@ Q.practice = true;
 
 Q.trialnum = 0;
 
-Q.NUMBER_OF_PRACTICE = 1;
-Q.NUMBER_OF_REAL = 2;
+Q.NUMBER_OF_PRACTICE = 10;
+Q.NUMBER_OF_REAL = 30;
 
 
 Q.init = function(how_many, need_switch) {
