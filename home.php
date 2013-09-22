@@ -156,4 +156,8 @@
 <div id="finish" style="display:none;">
 	<h2>Thank you for participating in our study! We really appreciate your help.</h2>
 	<img src="http://i46.tinypic.com/2s7j7yq.jpg"><img src="http://i46.tinypic.com/2s7j7yq.jpg">
+
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparse.com" target="_blank">Share on Facebook</a>
+
+    <h2>Scare your friends! Send them this link: http://tinyurl.com/focusmusic</h2>
 </div>
