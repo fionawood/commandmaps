@@ -8,7 +8,7 @@
        <?php if (isset($title)): ?>
             <title>it's us. hello!<?= htmlspecialchars($title) ?></title>
         <?php else: ?>
-            <title>CS279!</title>
+            <title>Test your reaction time</title>
         <?php endif ?>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
