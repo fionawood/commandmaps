@@ -293,6 +293,8 @@ Q.init_experiment = function() {
 
   console.log('Starting');
 
+  loopMusic();
+
   // create the user
   Q.user = new User();
   Q.user.load_time = 100;
@@ -375,7 +377,7 @@ Q.next_section = function() {
     // check if we are all done
     if (Q.current_sequence == Q.sequence[1]) {
 
-      Q.show_questionnaire();
+      Q.scary_guy();
 
       return;
 
@@ -397,8 +399,24 @@ Q.next_section = function() {
 
 }
 
-Q.show_questionnaire = function() {
+Q.scary_guy = function() {
+
   $('#experiment').hide();
+ 
+  // play sound
+  scream();
+
+  // show div
+  $('#scaryguy').show();
+
+  blink(900000, 10);
+  
+  setTimeout(function() {$('#scaryguy').hide();Q.show_questionnaire()},2000);
+
+}
+
+Q.show_questionnaire = function() {
+  
   $('#questionnaire').show();
 }
 
