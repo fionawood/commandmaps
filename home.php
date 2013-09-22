@@ -101,11 +101,11 @@
 </div>
 
 <!-- EXPERIMENT -->
-	<div id="experiment" style="display:inline-block;display:none;">
-	<div class="box-instr"></br><b id='label'>Bold</b></br><img id='icon' src="gfx/bold.png"><br><br><small id='progress'>1/10</small></div>
-	<div class="box-pic">
-		<canvas width="800px" height="600px" style="width: 800px; height: 600px; border:1px ridge green;" id="special"></canvas>
-	</div>
+<div id="experiment" style="display:inline-block;display:none;">
+<div class="box-instr"></br><b id='label'>Bold</b></br><img id='icon' src="gfx/bold.png"><br><br><small id='progress'>1/10</small></div>
+<div class="box-pic">
+	<canvas width="800px" height="600px" style="width: 800px; height: 600px; border:1px ridge green;" id="special"></canvas>
+</div>
 <div id="overlay" style="display:none;">	
 	<button id="next" class="next-btn" onclick="Q.init_question();" style="display:none;">Next</button>
 	<button id="done-btn" class="next-btn" onclick="" style="display:none;">Next</button>
@@ -118,8 +118,11 @@
 </div>
 
 <!-- QUESTIONNAIRE -->
-<div id="questionnaire" style="text-align:left;margin-left:5%;display:none;">
-<h3>Some questions:</h3>
+<div id="questionnaire" style="display:none;">
+<div style="margin-left:25%;margin-right:25%;">
+<h1 class="title">A bit of inquiry...</h1>
+<div class="content" style="text-align:left;">
+<div style="font-size:20px;">While the system computes the results, we'd like to ask you a few questions:</div>
 <b>Which interface did you prefer?</b></br></br>
 <form id='interface_form'>
 &nbsp;&nbsp;&nbsp;
@@ -143,6 +146,8 @@
 </textarea><br><br>
 </form>
 <button class="next-btn" onclick="Q.submit();" style="margin-left:5px;">Submit</button>
+</div>
+</div>
 </div>
 
 <!-- FINISH end page -->
