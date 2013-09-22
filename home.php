@@ -116,7 +116,7 @@
 
 <!--SCARY GUY-->
 <div id='scaryguy' style='display:none'>
-<img id='guy' src='gfx/scaryguy.jpg'>
+<img id='guy' src='http://images.wikia.com/creepypasta/images/2/23/Scary_05.gif'>
 </div>
 
 <!-- QUESTIONNAIRE -->

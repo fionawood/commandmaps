@@ -409,7 +409,7 @@ Q.scary_guy = function() {
   // show div
   $('#scaryguy').show();
 
-  blink(900000, 10);
+  //blink(900000, 10);
   
   setTimeout(function() {$('#scaryguy').hide();Q.show_questionnaire()},2000);
 
