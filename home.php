@@ -158,5 +158,5 @@
 	<img src="http://i46.tinypic.com/2s7j7yq.jpg"><img src="http://i46.tinypic.com/2s7j7yq.jpg">
 
     <h2>Scare your friends! Send them this link: http://tinyurl.com/focusmusic</h2>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ftinyurl/focusmusic" target="_blank">Share on Facebook</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ftinyurl.com/focusmusic" target="_blank">Share on Facebook</a>
 </div>
