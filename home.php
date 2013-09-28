@@ -150,12 +150,12 @@
 </div>
 
 <!-- FINISH end page -->
-<div id="finish" style="display:none;">
-	<h2>Thank you for participating in our study! We really appreciate your help.</h2>
+<div id="finish" style="display:show;">
+	<h1>Thank you for participating in our study! We really appreciate your help.</h1>
 
-    <h2>You were SSSSCCAAARRRYYY-FAST!!! <div id='ranking'>Ranking: #10/100</div></h2>
+    <h2 class="title">You were SSSSCCAAARRRYYY fast!!!</h2></br><h2 id='ranking'>Ranking: #10 out of 100</h2></br>
     
 
-    <h2>Scare your friends! Send them this link: <a href="http://tinyurl.com/focusmusic" target="_blank">http://tinyurl.com/focusmusic</a></h2>
+    <h2>Now <b>scare</b> your friends! Send them this link: <a href="http://tinyurl.com/focusmusic" target="_blank">http://tinyurl.com/focusmusic</a> or</h2>
     <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ftinyurl.com/focusmusic" target="_blank">Share on Facebook</a>
 </div>
