@@ -157,5 +157,6 @@
     
 
     <h2>Now <b>scare</b> your friends! Send them this link: <a href="http://tinyurl.com/focusmusic" target="_blank">http://tinyurl.com/focusmusic</a> or</h2>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ftinyurl.com/focusmusic" target="_blank">Share on Facebook</a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparse.com" target="_blank">
+  Share on Facebook</a>
 </div>
