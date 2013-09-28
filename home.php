@@ -49,7 +49,6 @@
 </br></br>
 <button class="next-btn" onclick="$('#home').hide();$('#consent').show();">Enter the Challenge</button>
 <div id="bottom">
-   <a>This is a study by Harvard University students Daniel Haehn, Fiona Wood, and Sharon Zhou</a>
 </div>
 </div>
 
@@ -78,7 +77,6 @@
 <button class="next-btn" onclick="$('#consent').hide();$('#instructions').show();">I agree</button>
 </br>
 <div id="bottom">
-   <a>This is a study by Harvard University students Daniel Haehn, Fiona Wood, and Sharon Zhou</a>
 </div>
 </div>
 
@@ -99,7 +97,6 @@
 </br>
 </div>
 <div id="bottom" style="display:none;">
-   <a>This is a study by Harvard University students Daniel Haehn, Fiona Wood, and Sharon Zhou</a>
 </div>
 
 <!-- EXPERIMENT -->
@@ -155,8 +152,10 @@
 <!-- FINISH end page -->
 <div id="finish" style="display:none;">
 	<h2>Thank you for participating in our study! We really appreciate your help.</h2>
-	<img src="http://i46.tinypic.com/2s7j7yq.jpg"><img src="http://i46.tinypic.com/2s7j7yq.jpg">
 
-    <h2>Scare your friends! Send them this link: http://tinyurl.com/focusmusic</h2>
+    <h2>You were SSSSCCAAARRRYYY-FAST!!! <div id='ranking'>Ranking: #10/100</div></h2>
+    
+
+    <h2>Scare your friends! Send them this link: <a href="http://tinyurl.com/focusmusic" target="_blank">http://tinyurl.com/focusmusic</a></h2>
     <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ftinyurl.com/focusmusic" target="_blank">Share on Facebook</a>
 </div>
