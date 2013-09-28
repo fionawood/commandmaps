@@ -125,8 +125,8 @@
 <b>Which interface did you prefer?</b></br></br>
 <form id='interface_form'>
 &nbsp;&nbsp;&nbsp;
-<input type="radio" name="preference" value="ribbons"><img src='gfx/ribbon_home.png' width=200> &nbsp;&nbsp;&nbsp;
-<input type="radio" name="preference" value="commandmaps"><img src='gfx/commandmap.png' width=200>
+<input type="radio" name="preference" value="ribbons" id='ribradio'><img src='gfx/ribbon_home.png' width=200 onclick='$("#ribradio").click()'> &nbsp;&nbsp;&nbsp;
+<input type="radio" name="preference" value="commandmaps" id='cmdmapradio'><img src='gfx/commandmap.png' width=200 onclick='$("#cmdmapradio").click()'>
 </form>
 </br></br>
 <b>What device are you using on your computer?</b></br></br>
@@ -136,6 +136,13 @@
 <input type="radio" name="device" value="trackpad">Trackpad &nbsp;&nbsp;&nbsp;
 <input type="radio" name="device" value="trackball">Trackball &nbsp;&nbsp;&nbsp;
 <input type="radio" name="device" value="other">Other
+</form>
+</br></br>
+<b>If you are using Mechanical Turk, please specify your MTurk ID!</b>
+<form id='mturk'>
+<input type='text' name='mturk'>
+<br>
+<b>..and enter this code in MTurk:</b> <span id='c'>32f332ds</span>
 </form>
 </br></br>
 <b>Comments?</b>
@@ -150,14 +157,14 @@
 </div>
 
 <!-- FINISH end page -->
-<div id="finish" style="display:show;">
+<div id="finish" style="display:none;">
     <h1>Thank you for participating in our study! We really appreciate your help.</h1>
 
     <h2 class="title">You were SSSSCCAAARRRYYY fast!!!</h2></br><h2 id='ranking'>Ranking: #10 out of 100</h2></br>
     
 
-    <h2>Now <b>scare</b> your friends! Send them this link: <a href="http://tinyurl.com/focusmusic" target="_blank">http://tinyurl.com/focusmusic</a> or</h2>
-    <h2>You were SSSSCCAAARRRYYY-FAST!!! <div id='ranking'>Ranking: #10/100</div></h2>
+    <h2>Now <b>scare</b> your friends! Send them this link: http://tinyurl.com/focusmusic or</h2>
+  
     <script>
     function fbShare(url, title, descr, image, winWidth, winHeight) {
         var winTop = (screen.height / 2) - (winHeight / 2);
@@ -165,6 +172,5 @@
         window.open('http://www.facebook.com/sharer.php?s=100&p[title]=' + title + '&p[summary]=' + descr + '&p[url]=' + url + '&p[images][0]=' + image, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
     }
     </script>
-    <h2>Now, scare your friends!</h2>
-    <a href="javascript:fbShare('http://tinyurl.com/focusmusic', 'Test your concentration!', 'How fast can you click?', 'http://i1123.photobucket.com/albums/l543/hercampusphoto/HCIllinois/Illinois%203/MusicalNotesHead.jpg', 520, 350)"><img scr='gfx/fbsharebtn.png'></a>
+    <a href="javascript:fbShare('http://tinyurl.com/focusmusic', 'Test your concentration!', 'How fast can you click?', 'http://i1123.photobucket.com/albums/l543/hercampusphoto/HCIllinois/Illinois%203/MusicalNotesHead.jpg', 520, 350)"><img src='gfx/fbsharebtn.png'></a>
 </div>

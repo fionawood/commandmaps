@@ -19,6 +19,10 @@ class User extends Object {
 
   public $state = -1;
 
+  public $mturk_id = '';
+
+  public $mturk_code = '';
+
   public function __construct() {
 
     // we need to assign these values in the contructor

@@ -16,4 +16,8 @@ User = function() {
 
   this.state = -1;
 
+  this.mturk_id = '';
+
+  this.mturk_code = '';
+
 }

@@ -164,8 +164,8 @@ Q.practice = true;
 
 Q.trialnum = 0;
 
-Q.NUMBER_OF_PRACTICE = 10;
-Q.NUMBER_OF_REAL = 30;
+Q.NUMBER_OF_PRACTICE = 1//10;
+Q.NUMBER_OF_REAL = 2//30;
 
 
 Q.init = function(how_many, need_switch) {
@@ -417,6 +417,12 @@ Q.scary_guy = function() {
 
 Q.show_questionnaire = function() {
   
+  Q.c = Math.floor((1 + Math.random()) * 0x10000)
+             .toString(16)
+             .substring(1);
+
+  $('#c').html(Q.c);
+
   $('#questionnaire').show();
 }
 
@@ -425,6 +431,7 @@ Q.submit = function() {
   var device = $('#device_form input:radio:checked').val();
   var preference = $('#interface_form input:radio:checked').val();
   var comments = $('#comments_form textarea').val();
+  var mturk_id = $('#mturk input:text').val();
 
   if (!device || !preference) {
 
@@ -438,6 +445,8 @@ Q.submit = function() {
   Q.user.device = device;
   Q.user.preference = preference;
   Q.user.comments = comments;
+  Q.user.mturk_id = mturk_id;
+  Q.user.mturk_code = Q.c;
   // 100% done
   Q.user.state = '100';
 
