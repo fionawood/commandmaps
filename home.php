@@ -166,5 +166,5 @@
     }
     </script>
     <h2>Now, scare your friends!</h2>
-    <a href="javascript:fbShare('http://tinyurl.com/focusmusic', 'Test your concentration!', 'How fast can you click?', 'http://i1123.photobucket.com/albums/l543/hercampusphoto/HCIllinois/Illinois%203/MusicalNotesHead.jpg', 520, 350)">Share</a>
+    <a href="javascript:fbShare('http://tinyurl.com/focusmusic', 'Test your concentration!', 'How fast can you click?', 'http://i1123.photobucket.com/albums/l543/hercampusphoto/HCIllinois/Illinois%203/MusicalNotesHead.jpg', 520, 350)"><img scr='gfx/fbsharebtn.png'></a>
 </div>
