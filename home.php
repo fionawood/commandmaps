@@ -8,7 +8,7 @@
        <?php if (isset($title)): ?>
             <title>it's us. hello!<?= htmlspecialchars($title) ?></title>
         <?php else: ?>
-            <title>Test your reaction time</title>
+            <title>CS279!</title>
         <?php endif ?>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -34,8 +34,8 @@
 <!-- <link rel="stylesheet" type="text/css" href="/css/result-light.css"> -->
 
 <style type='text/css' media="screen">
-	canvas, img {display:block margin:lem auto; border:1px solid black;}
-	canvas { background:url(http://monster.krash.net/cs279/commandmaps/gfx/commandmap.png);}
+    canvas, img {display:block margin:lem auto; border:1px solid black;}
+    canvas { background:url(http://monster.krash.net/cs279/commandmaps/gfx/commandmap.png);}
 </style>
 
 
@@ -103,11 +103,11 @@
 <div id="experiment" style="display:inline-block;display:none;">
 <div class="box-instr"></br><b id='label'>Bold</b></br><img id='icon' src="gfx/bold.png"><br><br><small id='progress'>1/10</small></div>
 <div class="box-pic">
-	<canvas width="800px" height="600px" style="width: 800px; height: 600px; border:1px ridge green;" id="special"></canvas>
+    <canvas width="800px" height="600px" style="width: 800px; height: 600px; border:1px ridge green;" id="special"></canvas>
 </div>
-<div id="overlay" style="display:none;">	
-	<button id="next" class="next-btn" onclick="Q.init_question();" style="display:none;">Next</button>
-	<button id="done-btn" class="next-btn" onclick="" style="display:none;">Next</button>
+<div id="overlay" style="display:none;">    
+    <button id="next" class="next-btn" onclick="Q.init_question();" style="display:none;">Next</button>
+    <button id="done-btn" class="next-btn" onclick="" style="display:none;">Next</button>
 </div>
 </div>
 
@@ -150,16 +150,13 @@
 </div>
 
 <!-- FINISH end page -->
-<div id="finish" style="display:none;">
-	<h2>Thank you for participating in our study! We really appreciate your help.</h2>
+<div id="finish" style="display:show;">
+    <h1>Thank you for participating in our study! We really appreciate your help.</h1>
 
-    <h2>You were SSSSCCAAARRRYYY-FAST!!! <div id='ranking'>Ranking: #10/100</div></h2>
-    <script>
-    function fbShare(url, title, descr, image, winWidth, winHeight) {
-        var winTop = (screen.height / 2) - (winHeight / 2);
-        var winLeft = (screen.width / 2) - (winWidth / 2);
-        window.open('http://www.facebook.com/sharer.php?s=100&p[title]=' + title + '&p[summary]=' + descr + '&p[url]=' + url + '&p[images][0]=' + image, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
-    }
-    </script>
-    <a href="javascript:fbShare('http://tinyurl.com/focusmusic', 'Test your concentration!', 'How fast can you click?', 'gfx/picture.png', 520, 350)">Share</a>
+    <h2 class="title">You were SSSSCCAAARRRYYY fast!!!</h2></br><h2 id='ranking'>Ranking: #10 out of 100</h2></br>
+    
+
+    <h2>Now <b>scare</b> your friends! Send them this link: <a href="http://tinyurl.com/focusmusic" target="_blank">http://tinyurl.com/focusmusic</a> or</h2>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparse.com" target="_blank">
+  Share on Facebook</a>
 </div>
