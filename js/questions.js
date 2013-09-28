@@ -446,8 +446,41 @@ Q.submit = function() {
     console.log('updated user', Q.user.id);
 
     $('#questionnaire').hide();
+    Q.rank();
     $('#finish').show();
 
   });
 
 }
+
+Q.rank = function() {
+
+  $.ajax({
+
+    url: 'best.php?user_id='+Q.user.id
+
+  }).done(function(res) {
+    res = JSON.parse(res);
+
+    // first the click time
+    clicktime = res[0];
+
+    // second the best time
+    besttime = res[1];
+
+    // the rank
+    rank = res[2];
+
+    // the total
+    total = res[3];
+
+
+    // update the div
+    $('#ranking').html('Ranking: #'+rank+'/'+total+' with avg. clicktime '+clicktime+' (best: '+besttime+')');
+
+
+  });
+
+
+}
+
