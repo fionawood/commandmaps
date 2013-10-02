@@ -20,6 +20,16 @@
         <script src='js/db.js'></script>
         <script src='js/soundmanager2-nodebug-jsmin.js'></script>
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44438123-1', 'krash.net');
+  ga('send', 'pageview');
+
+</script>
 
     </head>
 
@@ -68,8 +78,8 @@
 <ul><h4>Duration</h4></ul>
 <ul>Approximately 10 minutes.</ul>
 <ul><h4>To contact the researcher</h4></ul>
-<ul>If you have questions or concerns about this research, please contact prof. Krzysztof Gajos, Maxwell Dworkin 251, 33 Oxford St, Cambridge, MA 02138, kgajos@seas.harvard.edu</ul>
-<ul>Whom to contact about your rights in this research, for questions, concerns, suggestions, or complaints that are not being addressed by the researcher, or research-related harm: Committee on the Use of Human Subjects in Research at Harvard University, 1414 Massachusetts Avenue, Second Floor, Cambridge, MA 02138. Phone: 617-496-2847 (CUHS). Email: cuhs@fas.harvard.edu.</ul>
+<!-- <ul>If you have questions or concerns about this research, please contact prof. Krzysztof Gajos, Maxwell Dworkin 251, 33 Oxford St, Cambridge, MA 02138, kgajos@seas.harvard.edu</ul>
+ --><ul>Whom to contact about your rights in this research, for questions, concerns, suggestions, or complaints that are not being addressed by the researcher, or research-related harm: Committee on the Use of Human Subjects in Research at Harvard University, 1414 Massachusetts Avenue, Second Floor, Cambridge, MA 02138. Phone: 617-496-2847 (CUHS). Email: cuhs@fas.harvard.edu.</ul>
 <ul>By clicking the button below you confirm that you have read and understood the above and agree to take part in this research. Your participation is voluntary and you are free to leave the experiment at any time by simply closing the web browser.</ul>
 </div>
 </div>

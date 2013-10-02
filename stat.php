@@ -13,6 +13,7 @@
 <td>Sequence</td>
 <td>Avg. Clicktime Commandmaps</td>
 <td>Avg. Clicktime Ribbons</td>
+<td>Difference</td>
 </tr>
 <?php
 
@@ -46,6 +47,7 @@ foreach ($users as $key => $value) {
   $commandmap_vals = DB::getInstance()->execute('SELECT * FROM `commandmap_avg` WHERE user_id='.$user->id);
   $ribbon_vals = DB::getInstance()->execute('SELECT * FROM `ribbon_avg` WHERE user_id='.$user->id);
 
+
   ?>
   <tr>
   <td><?php echo $user->id; ?></td>
@@ -58,6 +60,7 @@ foreach ($users as $key => $value) {
   <td><?php echo $user->sequence; ?></td>
   <td><?php echo $commandmap_vals[0][1][1]; ?></td>
   <td><?php echo $ribbon_vals[0][1][1]; ?></td>
+  <td><?php echo $ribbon_vals[0][1][1]-$commandmap_vals[0][1][1]; ?></td>
   </tr>
   <?php
 
