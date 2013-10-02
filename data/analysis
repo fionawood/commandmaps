@@ -1,0 +1,36 @@
+> hist(data4$avgclicktimedifference)
+> mean(data4$avgclicktimedifference)
+[1] 594.9639
+> mean(data4$avgclicktimecmdmp)
+[1] 1833.091
+> mean(data4$avgclicktimeribbons)
+[1] 2428.054
+> sd(data4$avgclicktimeribbons)
+[1] 487.4098
+> sd(data4$avgclicktimecmdmps)
+[1] NA
+> sd(data4$avgclicktimecmdmp)
+[1] 556.5752
+> sd(data4$avgclicktimedifference)
+[1] 547.1868
+> t.test(data4$avgclicktimecmdmp, data4$avgclicktimeribbons, paired=TRUE)
+
+	Paired t-test
+
+data:  data4$avgclicktimecmdmp and data4$avgclicktimeribbons
+t = -9.1619, df = 70, p-value = 1.336e-13
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -724.4809 -465.4468
+sample estimates:
+mean of the differences 
+              -594.9639 
+
+res = ezANOVA(data=stacked_data, dv=avgclicktime, wid=user, within=which, between=.(dev))
+res
+$ANOVA
+     Effect DFn DFd          F            p p<.05         ges
+2       dev   2  68  0.1426021 8.673576e-01       0.003102044
+3     which   1  68 88.6188769 6.077302e-14     * 0.251693247
+4 dev:which   2  68  2.9509884 5.901972e-02       0.021909980
+
