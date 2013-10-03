@@ -1,6 +1,3 @@
-
-
-
 > hist(data4$avgclicktimedifference)
 > mean(data4$avgclicktimedifference)
 [1] 594.9639
